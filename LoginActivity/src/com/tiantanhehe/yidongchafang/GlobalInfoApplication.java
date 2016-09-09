@@ -19,6 +19,8 @@ import org.acra.ACRAConfiguration;
 import org.acra.annotation.ReportsCrashes;
 import org.json.JSONObject;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
 import com.freerdp.afreerdp.services.LibFreeRDP;
 import com.tiantanhehe.tiantanrdp.NetworkStateReceiver;
 import com.tiantanhehe.tiantanrdp.ScreenReceiver;
@@ -60,6 +62,13 @@ public class GlobalInfoApplication extends Application implements
 
 	public DataManager data_manager;
 
+	/**
+	 * @Description: Volley队列单例
+	 * @author:小冰
+	 * @date: 2016年9月9日 上午11:55:25
+	 */
+	private static RequestQueue mQueue;
+	
 	private static GlobalInfoApplication appInstance;
 
 	public static GlobalInfoApplication getInstance() {
@@ -97,9 +106,20 @@ public class GlobalInfoApplication extends Application implements
 		IntentFilter filter = new IntentFilter(Intent.ACTION_SCREEN_ON);
 		filter.addAction(Intent.ACTION_SCREEN_OFF);
 		registerReceiver(new ScreenReceiver(), filter);
-
+		
+		mQueue = Volley.newRequestQueue(getApplicationContext());
 	}
 
+	/**
+	 * @Description: Volley队列单例
+	 * @author:小冰
+	 * @date: 2016年9月9日 上午11:55:25
+	 */
+	public static RequestQueue getHttpQueue() {
+		return mQueue;
+	}
+	
+	
 	/**
 	 * @Title: initParams
 	 * @Description: 初始化参数信息

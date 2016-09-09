@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="center"
             android:text="住院用药"
             android:textColor="#2185c6"
@@ -67,7 +67,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="center"
             android:text="护理记录"
             android:textColor="#2185c6"
@@ -123,7 +123,7 @@
             android:orientation="horizontal" >
 
             <LinearLayout
-                android:layout_width="1600dp"
+                android:layout_width="2400dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical" >
 
@@ -134,8 +134,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:background="#c0e4f6"
-                    android:orientation="horizontal"
-                    android:paddingTop="8dp" >
+                    android:orientation="horizontal" >
                 </LinearLayout>
 
                 <LinearLayout
@@ -152,49 +151,64 @@
                         android:textSize="22sp" />
                 </LinearLayout>
 
-                <LinearLayout
+                <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical" >
+                    android:layout_weight="2" >
 
-                    <com.github.mikephil.charting.charts.LineChart
-                        android:id="@+id/chart"
+                    <LinearLayout
+                        android:id="@+id/ll_drug_item"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1" />
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                </ScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/ll_temper_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <GridView
+                        android:id="@+id/gridview_blood"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:numColumns="auto_fit" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
 
                 <LinearLayout
                     android:layout_width="80dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -208,7 +222,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="103"
-                            android:textSize="14sp" />
+                            android:textSize="12sp" />
 
                         <View
                             android:layout_width="0.5dp"
@@ -221,7 +235,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="53"
-                            android:textSize="14sp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -236,7 +250,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="103"
-                            android:textSize="14sp" />
+                            android:textSize="12sp" />
 
                         <View
                             android:layout_width="0.5dp"
@@ -249,7 +263,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="53"
-                            android:textSize="14sp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
