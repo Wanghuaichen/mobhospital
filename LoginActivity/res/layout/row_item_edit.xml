@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:maxHeight="50dp"
+    android:minHeight="50dp"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_edittext_normal"
+        android:enabled="false"
+        android:gravity="center"
+       
+        android:maxWidth="@dimen/scroll_tab_column_width"
+        android:minWidth="@dimen/scroll_tab_column_width"
+        android:singleLine="true"
+        android:text="表头测试"
+        android:textColor="#850" />
+
+    <com.tiantanhehe.mobileemr.piliangtizheng.CHTableScrollView
+        android:id="@+id/item_scroll_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_edittext"
+        android:orientation="horizontal"
+        android:scrollbars="none" >
+        <LinearLayout 
+            android:id="@+id/item_linear"
+            android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_edittext"
+        android:orientation="horizontal"
+            ></LinearLayout>
+    </com.tiantanhehe.mobileemr.piliangtizheng.CHTableScrollView>
+
+</LinearLayout>

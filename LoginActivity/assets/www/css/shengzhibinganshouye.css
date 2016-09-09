@@ -1,0 +1,202 @@
+body {
+	font-family:"ÀŒÃÂ", Arial, Helvetica, sans-serif;
+	font-size:18px;
+	margin:0px;
+	padding:0px;
+	background-color:white;
+}
+label{
+	cursor:pointer;
+}
+p{
+	padding:0px;
+	margin:0px;
+}
+ol,ul{
+	padding:0;
+	margin-top:6px;
+	margin-bottom:6px;
+	}
+
+table{
+	border-collapse:separate;
+	*border-collapse:collapse;
+	empty-cells:show;
+	word-wrap:break-word;
+	overflow:hidden;
+}
+table tr td { line-height:26px;}
+.page {
+	margin:0px auto 0 auto;
+	padding-top:0px;
+	width:750px;
+	position:relative;
+}
+.one_page {
+	margin:0px auto 0 auto;
+	padding-top:0px;
+	width:750px;
+	position:relative;
+}
+.page_break {
+	page-break-before:always;
+}
+.daima_title {
+	text-align:left;
+	font-size:16px;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+
+.head_title_bingcheng {
+	text-align:center;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+.main_title_bingcheng {
+	letter-spacing:10px;
+	text-align:center;
+	font-size:25px;
+	height:30px;
+}
+.sub_title_bingcheng {
+	padding-left:30px;
+	letter-spacing:30px;
+	font-size:25px;
+	height:30px;
+}
+
+.main_title {
+	letter-spacing:17px;
+	text-align:center;
+	font-size:35px;
+	height:45px;
+}
+.main_title_long_name {
+	letter-spacing:2px;
+	text-align:center;
+	font-size:25px;
+	height:45px;
+}
+.sub_title {
+	letter-spacing:17px;
+	font-size:30px;
+	height:35px;
+	text-align:center;
+	margin-top:10px;
+}
+
+.head_table {
+	font-size:16px;
+	line-height:1.5;
+	width:750px;
+	margin-bottom:5px
+}
+.head_table .head_title {
+	letter-spacing:17px;
+	font-size:30px;
+	height:35px;
+	text-align:center;
+	margin-top:10px;
+}
+.head_table .sub_title_small {
+	letter-spacing:2px;
+	font-size:20px;
+	height:35px;
+	text-align:center;
+	margin-top:10px;
+}
+.head_table .letter_spacing{
+	letter-spacing:8px;
+}
+.head_table .letter_spacing_32{
+	letter-spacing:32px;
+}
+.head_table .text_align_center{
+	text-align:center;
+}
+
+.shengzhi_border_bottom_show{
+	border-bottom:1px solid #000;
+}
+.shengzhi_border_bottom{
+	border-bottom:1px solid #000;
+	border-right:none;
+}
+.shengzhi_border_bottom_none{
+	border-bottom:none;
+}
+.shengzhi_border_right_none{
+	border-right:none;
+}
+
+.content_table_without_inner_border {
+	font-size:14px;
+	line-height:24px;
+	width:750px;
+	margin:0px;
+}
+.content_table_without_inner_border_one {
+	font-size:14px;
+	line-height:24px;
+	width:725px;
+	margin:0px;
+}
+/**
+ * øÿ÷∆±ﬂøÚœ‘ æ
+ **/
+.border_top{
+	border-top:1px solid #000;
+}
+.border_left{
+	border-left:1px solid #000;
+}
+.border_right{
+	border-right:1px solid #000;
+}
+.border_bottom{
+	border-bottom:1px solid #000;
+}
+.content_table_without_inner_border .info_title{
+	padding-left:4px;
+	text-align:left;
+}
+.content_table_without_inner_border .info_title_bold {
+	padding-left:4px;
+	text-align:left;
+	font-weight:bold;
+}
+.content_table_without_inner_border .info_area{
+	text-align:left;
+	padding-left:2px;
+}
+.content_table_without_inner_border .info_area_border {
+	border-bottom:1px solid black;
+	text-align:left;
+	padding-left:2px;
+}
+.content_table_without_inner_border .jianju_gaodu {
+	letter-spacing:2px;
+	font-size:20px;
+	height:35px;
+	text-align:center;
+	margin-top:10px;
+}
+.content_table_without_inner_border .info_text_center{
+	text-align:center;
+}
+.content_table_without_inner_border .letter_spacing{
+	letter-spacing:6px;
+}
+.content_table_without_inner_border .letter_spacing_8{
+	letter-spacing:8px;
+}
+.content_table_without_inner_border .letter_spacing_28{
+	letter-spacing:28px;
+}
+.content_table_without_inner_border .vertical_align{
+	vertical-align:text-top;
+}
+.content_table_without_inner_border .text_indent{
+	text-indent:20px;
+}

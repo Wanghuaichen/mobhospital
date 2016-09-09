@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_huanzhe_list_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<LinearLayout 
+     android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#e4e4e4"
+        android:orientation="vertical">
+          <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/rl_qbhz"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/border_hzfz" >
+
+                <ImageView
+                    android:id="@+id/iv_qbhz"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/common_down_white"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/tv_qbhz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toLeftOf="@id/iv_qbhz"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="住院"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_hljb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@drawable/border_tshz"
+                android:padding="2dp"
+                 >
+
+                <ImageView
+                    android:id="@+id/iv_hljb"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/common_down_white"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/tv_hljb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toLeftOf="@id/iv_hljb"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="康复"
+                    android:visibility="visible"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" 
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/all_but"
+            android:layout_width="0.0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:background="@color/qianlanse"
+            android:gravity="center"
+            style=""
+            android:layout_weight="1"
+            android:onClick="getAllHuanzhe"
+            android:text="@string/quanbu"
+            android:visibility="gone"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/fenzu_one_but"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:background="#D2D4FD"
+            android:gravity="center"
+            style=""
+            android:onClick="getHuanzheFenzu"
+            android:text="@string/yidazu"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/fenzu_two_but"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:background="#D2D4FD"
+            android:gravity="center"
+            style=""
+            android:onClick="getHuanzheFenzu"
+            android:text="@string/erdazu"
+            android:textSize="14sp"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/kangfu_zhiliao_but"
+            android:layout_width="0.0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:background="@color/qianlanse"
+            android:gravity="center"
+            style=""
+            android:layout_weight="1"
+            android:onClick="getKangfuHuanzhe"
+            android:text="@string/kangfuzhiliao"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+      <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/sousuocontent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/border_sousuokuang"
+                android:paddingLeft="5dp" />
+
+            <Button
+                android:id="@+id/sousuo_but"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border_sousuobutton"
+                android:onClick="getOneHuanzhe"
+                android:text="搜索" />
+        </LinearLayout>
+    
+</LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text_zongrenshu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_teshuhuanze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp" 
+             android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal"
+          >
+
+        <TextView
+            android:id="@+id/text_yijihuanzhe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+             android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_erjihuanzhe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp" 
+             android:visibility="gone"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/right_content"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:divider="#eaeaea"
+        android:dividerHeight="1dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbars="none"
+        android:visibility="gone" >
+    </ListView>
+
+    <ExpandableListView
+        android:id="@+id/right_huanzhe_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:indicatorLeft="30dp"
+        android:scrollbars="none" />
+
+</LinearLayout>

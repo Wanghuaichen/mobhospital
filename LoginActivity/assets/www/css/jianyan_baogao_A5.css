@@ -1,0 +1,96 @@
+body {
+	font-family:"ËÎÌו", Arial, Helvetica, sans-serif;
+	font-size:18px;
+	margin:0px auto 0px auto;
+	padding:0px;
+}
+table{
+	table-layout:fixed;
+	border-collapse:collapse;
+	empty-cells:show;
+	word-wrap:break-all;
+	word-break:break-all;
+	overflow:hidden;
+}
+.page {
+	margin:0px auto 0 auto;
+	padding-top:0px;
+	width:750px;
+}
+.page  .head_title {
+	text-align:center;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+.page  .head_title .main_title {
+	letter-spacing:5px;
+	text-align:center;
+	font-size:30px;
+	height:35px;
+}
+.page  .head_title .sub_title_report {
+	letter-spacing:20px;
+	font-size:25px;
+	height:25px;
+}
+
+.page .head_table {
+	table-layout:fixed;
+	font-size:16px;
+	line-height:20px;
+	width:750px;
+	margin-bottom:10px
+}
+
+.page .head_table .info_area {
+	border-bottom:1px solid #000;
+	text-align:left;
+	padding-left:2px;
+}
+.page .head_table .info_title {
+	text-align:right;
+	padding-right:2px;
+}
+
+.page .footer_table {
+	table-layout:fixed;
+	font-size:16px;
+	line-height:20px;
+	width:750px;
+	margin-top:5px
+}
+
+.page .footer_table .info_area {
+	border-bottom:1px solid #000;
+	text-align:left;
+	padding-left:2px;
+}
+.page .footer_table .info_title {
+	text-align:right;
+	padding-right:2px;
+}
+
+.page .baogao_table {
+	width:750px;
+	table-layout:fixed;
+	border-top:1px solid #000;
+	border-left:1px solid #000;
+	font-size:14px;
+}
+.page .baogao_table tr td {
+	height:22px;
+	border-bottom:1px solid #000;
+	border-right:1px solid #000;
+	padding-left:5px
+}
+.page .baogao_table_title {
+	background:#b6dde8;
+}
+
+.jieguo_shuoming{
+	color:#F00;
+	}
+.shuoming{
+	padding-top:10px;
+	font-size:16px;
+	}	

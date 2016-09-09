@@ -1,0 +1,248 @@
+.tab_content{
+	width:100%;
+}
+.tab1, .tab2{
+	width:100%;
+	height:34px;
+	border:1px #cfedff solid;
+	border-bottom:0;
+}
+.tab1 ul, .tab2 ul{
+	margin:0;
+	padding:0;
+}
+.tab1 li, .tab2 li{
+	list-style:none;
+	float:left;
+	height:34px;
+	line-height:34px;
+	text-align:center;
+	border-right:1px #ebf7ff solid;
+	cursor:pointer;
+	background:#27a3f9;
+}
+.tab1 li .now, .tab2 li .now{
+	color:#5299c4;
+	background:#fff;
+	font-weight:bold;
+}
+.tablist{
+	width:97.7%;
+	height:75%;
+	padding:10px;
+	font-size:14px;
+	line-height:24px;
+	border:1px #cfedff solid;
+	border-top:0;
+	overflow:scroll;
+	display:none;
+}
+.block{
+	display:block;
+}
+
+label{
+	cursor:pointer;
+	vertical-align:middle;
+}
+input[type=checkbox]{
+	vertical-align:middle;
+}
+.edit_form
+{
+	width:90%;
+}
+.border_show{
+	border:1px solid #CCC;
+}
+.margin_top{
+	margin-top:10px;
+}
+.shengzhi_form_table {
+	width:98%;
+	margin-top:5px;
+	margin-left:20px;
+	table-layout:fixed;
+	font-size:14px;
+	line-height:24px;
+	height:24px;
+	background-color:#FFF;
+}
+.shengzhi_form_table tr{
+	height:30px;
+}
+.shengzhi_form_table_ex {
+	width:1200px;
+	margin-top:5px;
+	table-layout:fixed;
+	font-size:14px;
+	line-height:18px;
+	height:24px;
+	background-color:#FFF;
+}
+.shengzhi_form_table .border_all_show{
+	border:1px solid #CCC;
+	height:30px;
+}
+.shengzhi_form_table .input_width_20{
+	width:20px;
+}
+.shengzhi_form_table .input_width_30{
+	width:30px;
+}
+.shengzhi_form_table .input_width_40{
+	width:40px;
+}
+.shengzhi_form_table .input_width_50{
+	width:50px;
+}
+.shengzhi_form_table .input_width_65{
+	width:65px;
+}
+.shengzhi_form_table .input_width_70{
+	width:70px;
+}
+.shengzhi_form_table .input_width_80{
+	width:80px;
+}
+.shengzhi_form_table .input_width_90{
+	width:90px;
+}
+.shengzhi_form_table .input_width_100{
+	width:100px;
+}
+.shengzhi_form_table .input_width_130{
+	width:130px;
+}
+.shengzhi_form_table .input_width_150{
+	width:150px;
+}
+.shengzhi_form_table .input_width_260{
+	width:260px;
+}
+.shengzhi_form_table .input_width_280{
+	width:280px;
+}
+.shengzhi_form_table .input_width_330{
+	width:330px;
+}
+.shengzhi_form_table .input_width_338{
+	width:338px;
+}
+.shengzhi_form_table .input_width_482{
+	width:482px;
+}
+.shengzhi_form_table .input_width_626{
+	width:626px;
+}
+.shengzhi_form_table .input_width_653{
+	width:653px;
+}
+.shengzhi_form_table .font_size_12{
+	font-size:14px;
+}
+.align_right{
+	text-align:right;
+}
+.shengzhi_form_table .letter_spacing_6{
+	letter-spacing:6px;
+}
+.shengzhi_form_table .letter_spacing_22{
+	letter-spacing:22px;
+}
+.shengzhi_form_table .padding_left_2{
+	padding-left:2px;
+}
+.shengzhi_form_table .padding_right_2{
+	padding-right:5px;
+}
+.content_table_inner_border{
+	font-size:14px;
+	height:24px;
+	line-height:24px;
+	width:100%;
+}
+.content_table_inner_border .align_center{
+	text-align:center;
+}
+.content_table_inner_border .border_left{
+	border-left:1px solid #000;
+}
+.content_table_inner_border .border_top{
+	border-top:1px solid #000;
+}
+.content_table_inner_border .border_right{
+	border-right:1px solid #000;
+}
+.content_table_inner_border .border_bottom{
+	border-bottom:1px solid #000;
+}
+.content_table_inner_border .font_small{
+	font-size:14px;
+}
+.shengzhi_form_table_with_border { width:100%;border:1px solid #000;border-collapse:collapse;}
+.shengzhi_form_table_with_border tr td {border:1px solid #000;text-align:center; line-height:25px;border-collapse:collapse; font-size:14px;}
+.content_value { margin-bottom:50px; width:100%;border:1px solid #000; border-top:1px solid #FFF;border-collapse:collapse;}
+.content_value_input { width:100%; height:100%; border:0px; text-align:center;}
+	
+.add_item{
+	background:url(./images/jia.png) no-repeat;
+	width:24px;
+	height:24px;
+	cursor:pointer;
+	border:none;
+}
+.add_item_one{
+	background:url(./images/jia.png) no-repeat;
+	width:24px;
+	height:24px;
+	cursor:pointer;
+	border:none;
+}
+.delete_item{
+	background:url(./images/jian.png) no-repeat;
+	width:24px;
+	height:24px;
+	cursor:pointer;
+	border:none;
+}
+.one_content_block{
+	width:95%;
+	float:left;
+	border: 1px solid #D8D8D8;
+	border-radius: 10px;
+	margin-bottom:10px;
+	margin-top:10px;
+	padding:5px;
+}
+.sub_content
+{
+	width:100%;
+}
+.select_button_type
+{
+	width:160px;
+	float:left;
+	font-size:14px;
+	margin-left:10px;
+	margin-bottom:10px
+}
+.top_piaofu {
+	height:35px;
+	border-bottom:1px 
+	solid #D8D8D8;
+	position:fixed;
+	right:5px;
+	padding-top:10px;
+	left:5px;
+	top:0px;
+	z-index:1001;
+	background-color:#ffffff;
+	filter:alpha(Opacity=90);
+	-moz-opacity:0.9;
+	opacity: 0.9;
+}
+.margin_left_for_page 
+{
+	margin-left:50px;
+}

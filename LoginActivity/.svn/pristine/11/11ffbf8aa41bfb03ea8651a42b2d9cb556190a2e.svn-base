@@ -1,0 +1,1 @@
+var nationArray = new Array("汉族","满族","其他");

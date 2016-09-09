@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/select_bianqian"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="visible" />
+    <RelativeLayout
+        android:id="@+id/layout_audio_note"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/selector"
+        android:gravity="center"
+        android:visibility="visible" >
+
+        <ImageButton
+            android:id="@+id/button_audio_note"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector"
+            android:onClick="genAudioNote"
+            android:scaleType="centerInside"
+            android:src="@drawable/note_mic" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/layout_vedio_note"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/selector"
+        android:gravity="center"
+        android:visibility="visible" >
+
+        <ImageButton
+            android:id="@+id/button_vedio_note"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector"
+            android:gravity="center"
+            android:onClick="genVedioNote"
+            android:scaleType="centerInside"
+            android:src="@drawable/note_filmcamera"
+            android:textSize="18sp" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/layout_photo_note"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/selector"
+        android:gravity="center"
+        android:visibility="visible" >
+
+        <ImageButton
+            android:id="@+id/button_photo_note"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector"
+            android:gravity="center"
+            android:onClick="genPhotoNote"
+            android:scaleType="centerInside"
+            android:src="@drawable/note_camera"
+            android:textSize="18sp" >
+        </ImageButton>
+    </RelativeLayout>
+
+    	<TextView 
+	    android:layout_height="10dp"
+        android:layout_width="match_parent"/>
+
+<RelativeLayout
+        android:id="@+id/layout_blank_note"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/selector"
+        >
+    <ImageButton
+        android:id="@+id/button_blank_note"
+        android:layout_height="40dp"
+        android:layout_width="210dp"
+        android:scaleType="centerInside"
+        android:layout_gravity="center"
+        android:src="@drawable/note_blank"
+        android:background="@drawable/selector"
+        android:onClick="genBlankNote">       
+    </ImageButton> 
+    </RelativeLayout>
+	<TextView 
+	    android:layout_height="10dp"
+        android:layout_width="match_parent"/>
+	<RelativeLayout
+        android:id="@+id/layout_screenshot_note"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/selector">
+   <ImageButton
+        android:id="@+id/button_screenshot_note"
+        android:layout_height="40dp"
+        android:layout_width="210dp"
+        android:scaleType="centerInside"
+        android:gravity="center"
+        android:background="@drawable/selector"
+        android:src="@drawable/note_pic"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:onClick="genScreenshotNote">       
+    </ImageButton> 
+    </RelativeLayout>
+    	<TextView 
+	    android:layout_height="10dp"
+        android:layout_width="match_parent"/>
+	<RelativeLayout
+        android:id="@+id/layout_text_note"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/selector">
+   <ImageButton
+        android:id="@+id/button_text_note"
+        android:layout_height="40dp"
+        android:layout_width="210dp"
+        android:scaleType="centerInside"
+        android:gravity="center"
+        android:background="@drawable/selector"
+        android:src="@drawable/note_text"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:onClick="genTextNote">       
+    </ImageButton> 
+    </RelativeLayout>
+    	<TextView 
+	    android:layout_height="10dp"
+        android:layout_width="match_parent"/>    	
+</LinearLayout>

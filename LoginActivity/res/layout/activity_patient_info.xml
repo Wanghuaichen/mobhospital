@@ -1,0 +1,166 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/xingming"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:id="@+id/xingbie"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left" />
+
+        <TextView
+            android:id="@+id/nianling"
+            android:layout_width="0.0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left" />
+
+        <TextView
+            android:id="@+id/zhuyuan_id"
+            android:layout_width="0.0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left" />
+    </LinearLayout>
+
+    <LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="5dp"
+	    android:orientation="horizontal">
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:gravity="left"
+	        android:text="@string/chuanghao"
+	        android:paddingLeft="10dp" />
+	    <TextView
+	        android:id="@+id/bingchuang_hao"
+	        android:layout_width="0.0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:gravity="left"
+	        android:layout_weight="1"
+	         />
+    </LinearLayout>
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="5dp"
+	    android:orientation="horizontal">
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:gravity="left"
+	        android:text="@string/zhenduan"
+	        android:paddingLeft="10dp" />
+	    <TextView
+	        android:id="@+id/zhenduan"
+	        android:layout_width="0.0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:gravity="left"
+	        android:layout_weight="1"
+	        />
+    </LinearLayout>
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="5dp"
+	    android:orientation="horizontal">
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:gravity="left"
+	        android:text="@string/zhusu"
+	        android:paddingLeft="10dp" />
+	    <TextView
+	        android:id="@+id/zhusu"
+	        android:layout_width="0.0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:gravity="left"
+	        android:layout_weight="1"
+	        />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ruyuanjilu_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#95A3A6"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="入院记录"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/ruyuanjilu_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/bingchengjilu_shouci_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#95A3A6"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="首次病程记录"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/bingchengjilu_shouci_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/bingchengjilu_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#95A3A6"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="病程记录"
+        android:textColor="@color/white" />
+
+    <ListView
+        android:id="@+id/bingchengjilu_list"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:divider="#CCCCCC"
+        android:dividerHeight="1dp"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

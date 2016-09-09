@@ -1,0 +1,221 @@
+/* Desktops and laptops ----------- */
+    @media only screen
+    and (min-width : 1224px) {
+    /* Styles */
+    }
+       
+    /* Large screens ----------- */
+    @media only screen
+    and (min-width : 1824px) {
+    /* Styles */
+    }
+      
+    /* old Smartphones (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+    /* Styles */
+    }
+       
+    /* old Smartphones (landscape) ----------- */
+    @media only screen
+    and (min-width : 321px) {
+    /* Styles */
+    }
+       
+    /* old Smartphones (portrait) ----------- */
+    @media only screen
+    and (max-width : 320px) {
+    /* Styles */
+    }
+      
+    /* iPhone 4 ----------- */
+    @media
+    only screen and (-webkit-min-device-pixel-ratio : 1.5),
+    only screen and (min-device-pixel-ratio : 1.5) {
+    /* Styles */
+    }
+       
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px) {
+    /* Styles */
+    }
+       
+    /* iPads (landscape) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : landscape) {
+    /* Styles */
+    }
+       
+    /* iPads (portrait) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : portrait) {
+    /* Styles */
+    }
+      
+    /* Android Tablet (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 800px)
+    and (max-device-width : 1280px) {
+    /* Styles */
+    }
+       
+    /* Android Tablet (landscape) ----------- */
+    @media only screen
+    and (min-device-width : 800px)
+    and (max-device-width : 1280px)
+    and (orientation : landscape) {
+    /* Styles */
+    }
+       
+    /* Android Tablet (portrait) ----------- */
+    @media only screen
+    and (min-device-width : 800px)
+    and (max-device-width : 1280px)
+    and (orientation : portrait) {
+    /* Styles */
+    }
+       
+    /* Desire + Galaxy S2 (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 480px)
+    and (max-device-width : 800px) {
+    /* Styles */
+    }
+       
+    /* Desire + Galaxy S2 (landscape) ----------- */
+    @media only screen
+    and (min-device-width : 480px)
+    and (max-device-width : 800px)
+    and (orientation : landscape) {
+    /* Styles */
+    }
+       
+    /* Desire + Galaxy S2 (portrait) ----------- */
+    @media only screen
+    and (min-device-width : 480px)
+    and (max-device-width : 800px)
+    and (orientation : portrait) {
+    /* Styles */
+    }
+
+.xiaobianque_zhushou
+{
+	position:absolute;
+	top:30px;
+	bottom:35px;
+	width:100%;
+	background-color:#F1FAF0;
+	font-size:16px;
+	font-weight:bold;
+	padding:2px;
+	margin:0px;
+}
+.xiaobianque_keyword{
+	color:#C0C0C0;
+}
+.template_list_title
+{
+	display:block;
+	line-height:1.5;
+	font-size:16px;
+	color:#000;
+	background:#2BA5FA;
+	cursor:pointer;
+	border-bottom:1px dashed #000;
+	margin-bottom:5px;
+}
+.template_list_title:hover
+{
+	color:#FFF;
+}
+.template_category_list ul{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+}
+.template_category_list ul li {
+	list-style:none;
+	line-height:1.4;
+	font-size:16px;
+	cursor:pointer;
+	border-bottom:1px dashed #ccc;
+	padding-top:2px;
+	padding-buttom:2px;
+}
+.template_category_list ul li:hover {
+	background-color:#CAF2C8;
+	color:#0C6;
+}
+.template_category{
+	background:url(./images/template_category.png) no-repeat;
+	margin-left:4px;
+	padding-left:26px;
+	}
+.template_content_name{
+	background:url(./images/template_content.png) no-repeat;
+	margin-left:4px;
+	padding-left:24px;
+	}
+.template_frame .template_content {
+	width:400px;
+	height:400px;
+	font-size:16px;
+	line-height:1.4;
+	border-bottom:1px dashed #bfe16c;
+	float:left;
+	margin:10px 10px 10px;
+	overflow-y:scroll;
+}
+.template_menu{
+	margin:2px;
+	position:relative;
+	bottom:0px;
+	float:right;
+}
+.template_tab{
+	position:absolute;
+	top:60px;
+	bottom:35px;
+	width:100%;
+	background-color:#F1FAF0;
+	font-size:16px;
+	font-weight:bold;
+	padding:2px;
+	margin:0px;
+}
+.template_tab .template_tab_content{
+	width:99%;
+	height:98%;
+	font-weight:normal;
+	overflow:auto;
+}
+.template_tab .template_category_list{
+	width:99%;
+	height:49%;
+	font-weight:normal;
+	border:1px solid #2BA5FA;
+}
+.template_tab .template_list{
+	height:80%;
+	overflow-y:scroll;
+}
+.template_tab .template_content_title
+{
+	font-weight:bold;
+	margin-top:10px;
+	border-top:2px solid #000;
+}
+.template_tab .template_content{
+	width:99%;
+	height:44%;
+	font-weight:normal;
+	border:1px dashed #2BA5FA;
+	overflow:auto;
+}

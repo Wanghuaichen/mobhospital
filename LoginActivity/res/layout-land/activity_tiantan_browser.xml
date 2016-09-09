@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<WebView
+     android:id="@+id/webview"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     />
+<ImageView
+    android:id="@+id/right_huanzhe_list"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:scaleType="fitXY"
+    android:onClick="openHuanzheList"
+    android:layout_gravity="right"
+    android:background="@drawable/main_right_huanzhelist_selector"
+    android:contentDescription="@string/app_name"/>
+ <!-- <ImageView
+    android:id="@+id/fanhui"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginTop="5dp"
+    android:src="@drawable/fanhui_with_backgroundcolor"
+    android:onClick="goMain"
+    android:contentDescription="@string/app_name"/> -->
+
+</FrameLayout>

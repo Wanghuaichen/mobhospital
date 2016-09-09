@@ -1,0 +1,156 @@
+/**************************************************
+*  Created:  2011-11-01
+*  Info:处方管理页面CSS代码
+*  @Tiantanhehe (C)2011-3011 Tiantanhehe Inc.
+*  @Author DongJie <dj7229@126.com>
+*  @Cooperation Author YuanLin <yuanjinlin_2006@163.com> 
+*
+***************************************************/
+body {
+	margin:10px auto 0px auto;
+	font: 16px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p, form, input, ul, li{
+	margin:0;
+	padding:0;
+	border:none;
+}
+ul li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+}
+a img {
+	border:none;
+}
+table {
+	border-collapse:collapse;
+	empty-cells:show;
+}
+.page {
+	margin:0px auto 0 auto;
+	padding-top:10px;
+	width:750px;
+}
+.head_title {
+	text-align:center;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+.main_title {
+	letter-spacing:5px;
+	text-align:center;
+	font-size:24px;
+	height:32px;
+}
+.sub_title {
+	letter-spacing:25px;
+	font-size:20px;
+	height:22px;
+}
+.sub_title_long {
+	letter-spacing:10px;
+	font-size:20px;
+	height:22px;
+}
+.head_table {
+	font-size:16px;
+	line-height:1.5;
+	width:750px;
+}
+.head_table .info_title {
+	text-align:right;
+	padding-right:2px;
+	border-bottom:1px solid #333;
+}
+.head_table .info_area {
+	text-align:left;
+	padding-left:2px;
+	border-bottom:1px solid #333;
+}
+
+.content_table {
+	width:100%;
+	height:320px;
+	font-size:15px;
+	line-height:2.3;
+	text-align:left;
+	color:#000;
+}
+.content_sub_table
+{
+	width:100%;
+	height:350px;
+	border:1px solid #000;
+}
+.content_sub_table td{
+	padding-left:4px;
+}
+.content_head_table {
+	font-size:22px;
+	line-height:1.5;
+	text-align:left;
+	font-weight:bold;
+	padding-left:5px;
+}
+.content_head_table td{
+	padding-left:5px;
+}
+.none_border {
+	width:100%;
+	border:none;
+}
+.none_border td{
+	padding-right:6px;
+	vertical-align:top;
+}
+.none_border .small_line_height{
+	line-height:1.5
+}
+.info_right
+{
+	text-align:right;
+}
+.ajax_form
+{
+	border:none;	
+}
+
+.bottom_table {
+	font-size:15px;
+	line-height:1.4;
+	width:750px;
+	margin-top:5px;
+}
+.bottom_table .info_title {
+	text-align:right;
+}
+.bottom_table .info_area {
+	border-bottom:1px solid #000;
+	text-align:left;
+}
+.bottom_table .info_tips {
+	font-size:14px;
+	line-height:1.6;
+	text-align:left;
+}
+.content{
+	float:left;
+}
+.other_info{
+	float:left;
+}
+.sup{
+	margin-top:5px;
+	font-size:10px;
+	line-height:1;
+}
+.sub{
+	margin-top:5px;
+	font-size:10px;
+	line-height:1;
+}

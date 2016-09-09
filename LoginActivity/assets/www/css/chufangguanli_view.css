@@ -1,0 +1,318 @@
+/**************************************************
+*  Created:  2011-11-01
+*  Info:处方管理页面CSS代码
+*  @Tiantanhehe (C)2011-3011 Tiantanhehe Inc.
+*  @Author DongJie <dj7229@126.com>
+*  @Cooperation Author YuanLin <yuanjinlin_2006@163.com> 
+*
+***************************************************/
+body {
+	margin:10px auto 0px auto;
+	font: 16px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+	background-color:#FFF;
+}
+h1, h2, h3, h4, h5, h6, p, form, input, ul, li{
+	margin:0;
+	padding:0;
+	border:none;
+}
+ul li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+}
+a img {
+	border:none;
+}
+table {
+	border-collapse:collapse;
+	empty-cells:show;
+}
+.page {
+	margin:0px auto 0 10px;
+	padding-top:0px;
+	width:95%;
+	min-height:600px;
+}
+.page_break {
+	page-break-before:always;
+}
+.head_title {
+	text-align:center;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+.main_title {
+	letter-spacing:5px;
+	text-align:center;
+	font-size:25px;
+	height:35px;
+}
+.sub_chufang_title {
+	letter-spacing:25px;
+	font-size:22px;
+	height:25px;
+}
+.sub_title_long {
+	letter-spacing:10px;
+	font-size:22px;
+	height:25px;
+}
+.head_table {
+	font-size:18px;
+	line-height:1.5;
+	width:95%;
+}
+.head_table select {
+	width:auto;
+	}
+.head_table .info_title {
+	text-align:right;
+	padding-right:2px;
+	border-bottom:1px solid #333;
+}
+.head_table .info_area {
+	text-align:left;
+	padding-left:2px;
+	border-bottom:1px solid #333;
+}
+
+.content_head_table {
+	width:95%;
+	font-size:16px;
+	line-height:1.5;
+	text-align:center;
+	font-weight:bold;
+	color:#06F;
+	border:1px solid #5a88a7;
+}
+/*
+.content_head_table tr {
+	border:1px solid #6C0;
+}*/
+.content_head_table td {
+	border:1px solid #5a88a7;
+}
+.content_head_table .info_title {
+	padding-left:5px;
+	text-align:left;
+}
+.content_head_table .info_content {
+	padding-left:5px;
+	text-align:left;
+	color:#000;
+	font-weight:normal;
+}
+.content_table .qianming {
+	color:#999
+}
+.content_head_table .double_line {
+	padding-left:5px;
+	padding-right:5px;
+}
+.content_head_table .add_area {
+	text-align:left;
+	padding:5px;
+}
+.content_table {
+	width:95%;
+	font-size:14px;
+	line-height:2;
+	text-align:center;
+	color:#000;
+	border-bottom:2px solid #5a88a7;
+}
+.content_table tr {
+	border: none;
+}
+.content_table .groupmate {
+	border-top:1px dashed #5a88a7;
+	border-bottom:1px dashed #5a88a7;
+}
+.content_table .sub {
+	border-top:none;
+	border-bottom:1px dashed #5a88a7;
+}
+.content_table td {
+	border-top:1px solid #5a88a7;
+	border-left:1px solid #5a88a7;
+	border-right:1px solid #5a88a7;
+	border-bottom:none;
+}
+.content_table .long_content {
+	text-align:left;
+	padding-left:5px;
+}
+.editable {
+	cursor:pointer;
+}
+.editable_focus {
+	cursor:pointer;
+	background-color:#CBF1C9;
+}
+.editable_on_edit {
+	cursor:pointer;
+	background-color:#AFF1C9;
+	border:1px dotted #06F;
+}
+.none_border {}
+.none_border ul{}
+.none_border li{height:40px; margin-top:10px;}
+.ajax_form
+{
+	border:none;
+}
+.ajax_form li{
+	margin:5px 0px 5px 0px;
+}
+.ajax_form span{
+	margin-left:15px;
+}
+.content_table .add_area {
+	text-align:left;
+	padding:5px;
+}
+.input_type {
+	width:150px;
+	border:1px solid #6ABEFD;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_ks {
+	width:198px;
+	border:1px solid #6ABEFD;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_focus {
+	width:20%;
+	border:1px solid #00F;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_small {
+	width:9%;
+	border:1px solid #6ABEFD;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:0px;
+}
+.input_type_small_focus {
+	width:10%;
+	border:1px solid #00F;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_full {
+	width:79%;
+	border:1px solid #6ABEFD;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_full_focus {
+	width:85%;
+	border:1px solid #00F;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.select_type {
+	width:204px;
+	border:1px solid #6ABEFD;
+	height:22px;
+	line-height:22px;
+	margin-left:5px;
+	padding:2px;
+}
+.edit_table {
+	padding-bottom:10px;
+	display:inline;
+	width:100%;
+	background:#f8fdfe;
+	font-size:14px;
+	text-align:left;
+}
+.edit_table li {
+	border-bottom:1px dotted #999;
+}
+.edit_table span {
+	margin-left:15px;
+}
+.edit_table .info_title {
+	margin-left:20px;
+	font-weight:bold;
+}
+.edit_table .content {
+	width:600px;
+}
+.edit_chufang_button {
+	background:url(./images/button_medium.png) no-repeat;
+	border:none;
+	height:25px;
+	line-height:23px;
+	width:100px;
+	text-align:center;
+	color:#fff;
+	cursor:pointer;
+	font-weight:bold;
+	margin:5px;
+}
+.edit_chufang_button:hover {
+	background:url(./images/button_medium_hover.png) no-repeat;
+}
+.add_chufang_button {
+	background:url(./images/button_edit_long.png) no-repeat;
+	border:none;
+	height:25px;
+	line-height:23px;
+	width:140px;
+	text-align:center;
+	color:#fff;
+	cursor:pointer;
+	font-weight:bold;
+}
+.add_chufang_button:hover {
+	background:url(./images/button_edit_long_hover.png) no-repeat;
+}
+.error_tips {
+	background:url(./images/error_tips.gif) no-repeat;
+	margin-left:20px;
+	padding-left:20px;
+	height:16px;
+	line-height:16px;
+	text-align:left;
+	color:red;
+	margin-bottom:8px;
+}
+
+.bottom_table {
+	font-size:18px;
+	line-height:1.5;
+	width:95%;
+	margin-top:10px;
+}
+.bottom_table .info_title {
+	text-align:right;
+	padding-right:2px;
+}
+.bottom_table .info_area {
+	border-bottom:1px solid #000;
+	text-align:left;
+	padding-left:2px;
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="tiantan_mobile_emr_base_theme" parent="android:Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/main_bg</item>
+    </style>
+
+    <style name="login_input_text">
+        <item name="android:textColor">#444</item>
+    </style>
+
+    <style name="login_button">
+        <item name="android:textColor">#444</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="login_info_textview">
+        <item name="android:textColor">#00FF00</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="tiantan_mobile_emr_main_theme" parent="android:Theme.Holo.Light">
+        <item name="android:actionMenuTextColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:actionBarStyle">@style/tiantan_mobile_emr_actionbar_style</item>
+    </style>
+
+    <style name="tiantan_mobile_emr_actionbar_style" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/header_bj</item>
+    </style>
+
+    <style name="tiantan_mobile_emr_yizhu_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <style name="AppTheme" parent="AppBaseTheme"></style>
+
+    <style name="title">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">#24B5E9</item>
+    </style>
+
+    <style name="text_message">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="queding">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="quexiao">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="fou">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#ffffff</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="progressbar_style">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progressbar_outlook</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:minHeight">20dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+
+</resources>

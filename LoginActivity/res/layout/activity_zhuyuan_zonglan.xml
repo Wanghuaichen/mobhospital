@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/zhuyuan_zonglan_mokuai_jiange"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/baise"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@+string/jibenxinxi"
+                android:src="@drawable/zhuyuan_zonglan_jbxx" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@+string/jibenxinxi"
+                android:textColor="@color/zhuyuan_zonglan_xiaobiaoti"
+                android:textSize="@dimen/zhuyuan_zonglan_biaoti_ziti_daxiao"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zhuyuan_zonglan_fengexian_kuandu"
+            android:background="@color/zhuyuan_zonglan_fengexian" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/zhuyuan_zonglian_mokuai_background"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/zhuyuan_zonglan_zuobianju_daxiao"
+                android:layout_marginStart="@dimen/zhuyuan_zonglan_zuobianju_daxiao"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/nianling_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_nianling"
+                        android:textScaleX="1.0"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/zhuyuan_id_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nianling_bt"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_zhuyuan_hao"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/suozai_bingqu_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zhuyuan_id_bt"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_suozai_bingqu"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ruyuan_riqi_time_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/suozai_bingqu_bt"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_ruyuan_riqi"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nianling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/nianling_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/zhuyuan_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nianling"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/zhuyuan_id_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/suozai_bingqu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zhuyuan_id"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/suozai_bingqu_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/ruyuan_riqi_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/suozai_bingqu"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/ruyuan_riqi_time_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/xingbie_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_xingbie"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/bingchuang_hao_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/xingbie_bt"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_bingchanghao"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/zhuyuan_zhuangtai_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bingchuang_hao_bt"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_zhuuan_zhuangtai"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/xingbie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/xingbie_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/bingchuang_hao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/xingbie_bt"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/bingchuang_hao_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/zhuyuan_zhuangtai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bingchuang_hao"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/zhuyuan_zhuangtai_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="@dimen/zhuyuan_zonglan_mokuai_jiange_daxiao"
+            android:background="@color/baise"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@+string/zuijin_shenti_zhuangkuang"
+                android:src="@drawable/zhuyuan_zonglan_zxstzk" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@+string/zuijin_shenti_zhuangkuang"
+                android:textColor="@color/zhuyuan_zonglan_xiaobiaoti"
+                android:textSize="@dimen/zhuyuan_zonglan_biaoti_ziti_daxiao"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zhuyuan_zonglan_fengexian_kuandu"
+            android:background="@color/zhuyuan_zonglan_fengexian" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/zhuyuan_zonglian_mokuai_background"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/zhuyuan_zonglan_zuobianju_daxiao"
+                android:layout_marginStart="@dimen/zhuyuan_zonglan_zuobianju_daxiao"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/zuijin_tiwen_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_tiwen"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/zuijin_shengao_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zuijin_tiwen_bt"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_shengao"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/zuijin_ruliang_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zuijin_shengao_bt"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_ruliang"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/zuijin_tiwen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/zuijin_tiwen_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/zuijin_shengao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zuijin_tiwen"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/zuijin_shengao_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/zuijin_ruliang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zuijin_shengao"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/zuijin_ruliang_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/zuijin_maibo_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/zhuyuan_zonglan_maibo"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/zuijin_xueya_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zuijin_maibo_bt"
+                        android:text="@string/zhuyuan_zonglan_xueya"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/zuijin_chuliang_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zuijin_xueya_bt"
+                        android:text="@string/zhuyuan_zonglan_chuliang"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/zuijin_maibo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/zuijin_maibo_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/zuijin_xueya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zuijin_maibo"
+                        android:layout_toEndOf="@+id/zuijin_xueya_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/zuijin_chuliang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zuijin_xueya"
+                        android:layout_toEndOf="@+id/zuijin_chuliang_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="@dimen/zhuyuan_zonglan_mokuai_jiange_daxiao"
+            android:background="@color/baise"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@+string/zuijin_huli_zhuangkuang"
+                android:src="@drawable/zhuyuan_zonglan_zxhlzk" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@+string/zuijin_huli_zhuangkuang"
+                android:textColor="@color/zhuyuan_zonglan_xiaobiaoti"
+                android:textSize="@dimen/zhuyuan_zonglan_biaoti_ziti_daxiao"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zhuyuan_zonglan_fengexian_kuandu"
+            android:background="@color/zhuyuan_zonglan_fengexian" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/zhuyuan_zonglian_mokuai_background"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/zuijin_huli_zhuangkuang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/zhuyuan_zonglan_zuobianju_daxiao"
+                android:layout_marginStart="@dimen/zhuyuan_zonglan_zuobianju_daxiao"
+                android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="@dimen/zhuyuan_zonglan_mokuai_jiange_daxiao"
+            android:background="@color/baise"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@+string/zuijin_bingcheng_jilu"
+                android:src="@drawable/zhuyuan_zonglan_jbxx" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@+string/zuijin_bingcheng_jilu"
+                android:textColor="@color/zhuyuan_zonglan_xiaobiaoti"
+                android:textSize="@dimen/zhuyuan_zonglan_biaoti_ziti_daxiao"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zhuyuan_zonglan_fengexian_kuandu"
+            android:background="@color/zhuyuan_zonglan_fengexian" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/zhuyuan_zonglian_mokuai_background"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/zuixin_bingcheng_jilu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/zhuyuan_zonglan_zuobianju_daxiao"
+                android:layout_marginStart="@dimen/zhuyuan_zonglan_zuobianju_daxiao"
+                android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="@dimen/zhuyuan_zonglan_mokuai_jiange_daxiao"
+            android:background="@color/baise"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@+string/xiangguan_zeren_yishi"
+                android:src="@drawable/zhuyuan_zonglan_jbxx" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@+string/xiangguan_zeren_yishi"
+                android:textColor="@color/zhuyuan_zonglan_xiaobiaoti"
+                android:textSize="@dimen/zhuyuan_zonglan_biaoti_ziti_daxiao"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zhuyuan_zonglan_fengexian_kuandu"
+            android:background="@color/zhuyuan_zonglan_fengexian" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/zhuyuan_zonglian_mokuai_background"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/zhuyuan_zonglan_zuobianju_daxiao"
+                android:layout_marginStart="@dimen/zhuyuan_zonglan_zuobianju_daxiao"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/kezhuren_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_kezhuren"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/zhuzhi_yishi_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/kezhuren_bt"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_zhuzhi_yishi"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/jinxiu_yishi_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zhuzhi_yishi_bt"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_jinxiu_yishi"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/yanjiusheng_shixi_yishi_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/jinxiu_yishi_bt"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_yanjiushengshixi_yishi"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/kezhuren"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/kezhuren_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/zhuzhi_yishi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/kezhuren"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/zhuzhi_yishi_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/jinxiu_yishi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zhuzhi_yishi"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/jinxiu_yishi_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/yanjiusheng_shixi_yishi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/jinxiu_yishi"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/yanjiusheng_shixi_yishi_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/zhuren_yishi_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/zhuyuan_zonglan_zhuren_yishi"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/zhuyuan_yishi_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zhuren_yishi_bt"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/huyuan_zonglan_zhuyuan_yishi"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/shixi_yishi_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zhuyuan_yishi_bt"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/huyuan_zonglan_shixi_yishi"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/zhuren_yishi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/zhuren_yishi_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/zhuyuan_yishi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zhuren_yishi"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/zhuyuan_yishi_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+
+                    <TextView
+                        android:id="@+id/shixi_yishi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zhuyuan_yishi"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/shixi_yishi_bt"
+                        android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/huanzhe_guanli"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="@dimen/zhuyuan_zonglan_mokuai_jiange_daxiao"
+            android:background="@color/baise"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@+string/zuijin_huli_zhuangkuang"
+                android:src="@drawable/zhuyuan_zonglan_zxhlzk" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@+string/huanzhe_guanli"
+                android:textColor="@color/zhuyuan_zonglan_xiaobiaoti"
+                android:textSize="@dimen/zhuyuan_zonglan_biaoti_ziti_daxiao"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zhuyuan_zonglan_fengexian_kuandu"
+            android:background="@color/zhuyuan_zonglan_fengexian" />
+
+        <LinearLayout
+            android:id="@+id/kangfuzhenliao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/zhuyuan_zonglian_mokuai_background"
+            android:layout_marginLeft="20dp"
+            android:paddingBottom="20dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/kangfu_zhilaio_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="@string/zhuyaun_zonglan_kangfu_zhiliao"
+                android:textSize="@dimen/zhuyuan_zonglan_zhengwen_ziti_daxiao"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/kangfu_zhilaio"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                 />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

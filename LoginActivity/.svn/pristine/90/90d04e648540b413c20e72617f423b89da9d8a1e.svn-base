@@ -1,0 +1,176 @@
+﻿/************************************************************
+*  Created:  2011-11-01
+*  Info:医嘱和处方管理前台CSS代码，部分打印模式的CSS样式代码
+*  @Tiantanhehe (C)2011-3011 Tiantanhehe Inc.
+*  @Author DongJie <dj7229@126.com>
+*
+*************************************************************/
+body {
+	margin:0px;
+	padding:0px;
+	font: 16px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p, form, input, ul, li{
+	margin:0;
+	padding:0;
+	border:none;
+}
+ul li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+}
+a img {
+	border:none;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0px;
+	empty-cells:show;
+}
+.page {
+	margin:0px auto 0 auto;
+	padding-top:0px;
+	width:750px;
+	position:relative;
+}
+.head_title {
+	text-align:center;
+	margin-bottom:20px;
+	font-weight:bold;
+}
+.main_title {
+	letter-spacing:10px;
+	text-align:center;
+	font-size:35px;
+	height:45px;
+}
+.sub_title {
+	padding-left:20px;
+	letter-spacing:25px;
+	font-size:30px;
+	height:35px;
+}
+.sub_title_long {
+	letter-spacing:15px;
+	font-size:30px;
+	height:35px;
+}
+.head_table {
+	font-size:18px;
+	line-height:1.2;
+	width:100%;
+	margin-bottom:15px;
+}
+.head_table .info_title {
+	text-align:right;
+	padding-right:2px;
+}
+.content_head_table .long_content {
+	text-align:center;
+}
+
+.content_head_table .double_line {
+	padding-left:2px;
+	padding-right:2px;
+}
+.content_table {
+	width:100%;
+	font-size:14px;
+	line-height:1.5;
+	text-align:center;
+	color:#000;
+}
+.content_table .warning{
+	color:#F00;
+}
+.content_table .new_added{
+	color:#3C0;
+}
+.content_table .long_content {
+	text-align:left;
+}
+.content_table .long_content .no_blank{
+	padding-left:0px;
+}
+.head_table .info_area {
+	border-bottom:1px solid #FFF;
+	text-align:left;
+	padding-left:2px;
+}
+.content_head_table {
+	width:100%;
+	font-size:16px;
+	line-height:1.5;
+	text-align:center;
+	font-weight:bold;
+	color:#FFF;
+}
+.content_head_table td {
+	border:1px solid #FFF;
+}
+.content_table tr {
+	border: none;
+}
+.content_table td {
+	padding:0px;
+	border-top:none;
+	border-left:1px solid #FFF;
+	border-right:1px solid #FFF;
+	border-bottom:1px solid #FFF;
+}
+.content_table .groupmate {
+	border-top:1px dashed #FFF;
+	border-bottom:1px dashed #FFF;
+}
+.none_border {
+	border:none;
+}
+.float_right{
+	text-align:right;
+	float:right;
+	padding-right:2px;
+	border:none;
+}
+.float_left{
+	text-align:left;
+	float:left;
+	padding-left:2px;
+	border:none;
+}
+.float_left_full_width{
+	text-align:left;
+	float:left;
+	width:99%;
+	border:none;
+}
+.fix_left{
+	text-align:left;
+	border:none;
+}
+.fix_right{
+	text-align:right;
+	padding-right:2px;
+	border:none;
+}
+.qianming {
+	vertical-align:bottom;
+	text-align:right;
+	font-size:12px;
+	margin-right:2px;
+}
+.shoumo_qianming{
+	vertical-align: middle;
+	margin:0 auto;
+	width:80%;
+	line-height:80%
+
+}
+.yizhuzhengli_info{
+	width:100%;
+	text-align:center;
+}

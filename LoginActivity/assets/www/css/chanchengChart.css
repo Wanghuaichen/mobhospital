@@ -1,0 +1,165 @@
+/*body,td,th {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 12px;
+				margin:0px;
+				padding:0px;
+			}*/
+
+div.table_title {
+	height: 20px;
+	width: 750px;
+	margin-top: 20px;
+}
+
+div.table_title_left {
+	height: 20px;
+	width: 200px;
+	float: left;
+	margin-left: 200px;
+}
+
+div.table_title_left_info {
+	height: 20px;
+	width: 150px;
+	float: left;
+}
+
+div.table_title_red {
+	height: 10px;
+	width: 10px;
+	background-color: rgb(255,0,0);
+	float: left;
+}
+
+div.table_title_right_info {
+	height: 20px;
+	width: 150px;
+	float: left;
+}
+
+div.table_title_blue {
+	height: 10px;
+	width: 10px;
+	background-color: rgb(0,0,255);
+	float: left;
+}
+
+div.table_title_right {
+	height: 20px;
+	float: left;
+}
+
+div.chanchengChart{
+	height: 400px;
+	width: 770px;
+}
+
+table.chanchengChart_left{		
+	height: 400px;
+	width: 20px;
+	float: left;
+}
+
+table.chanchengChart_left td{		
+	height: 20px;
+}
+
+table.chanchengChart_middle{		
+	height: 400px;
+	width: 20px;
+	float: left;
+}
+
+table.chanchengChart_middle td{		
+	height: 20px;
+}
+
+table.chanchengChart_left_print{		
+	height: 400px;
+	width: 20px;
+	float: left;
+}
+
+table.chanchengChart_left_print td{		
+	height: 20px;
+}
+
+table.chanchengChart_middle_print{		
+	height: 400px;
+	width: 20px;
+	float: left;
+}
+
+table.chanchengChart_middle_print td{		
+	height: 20px;
+}
+
+table.chanchengChart_right{
+	border:1px solid;
+	width: 720px;
+	height: 400px;
+}
+table.chanchengChart_right td{
+	border:1px solid;
+	height: 10px;
+}
+
+table.chanchengChart_time{
+	/*border:1px solid;*/
+	width: 780px;
+	margin-left: 32px;
+}
+
+table.chanchengChart_time td{
+	height: 10px;
+}
+
+#box{
+	/*padding:13px 0px 10px;*/
+	/*padding-left:28px;*/
+	width:800px;
+	height:0px;
+	/*width:677px;
+	height:180px;*/
+	/*background:url() no-repeat;*/
+	position: relative;
+	top: -402px;
+	left: 37px;
+}
+
+#box_print{
+	/*padding:13px 0px 10px;*/
+	/*padding-left:28px;*/
+	width:800px;
+	height:0px;
+	/*width:677px;
+	height:180px;*/
+	/*background:url() no-repeat;*/
+	position: relative;
+	top: -405px;
+	left:38px;
+}
+
+div.chanchengChart2{
+	height: 200px;
+	width: 770px;
+	margin-top: 50px;
+}
+
+table.chanchengChart2_left{		
+	height: 200px;
+	width: 45px;
+	float: left;
+}
+
+table.chanchengChart2_right{
+	border:1px solid;
+	width: 720px;
+	height: 200px;
+	float: left;
+	margin-top: 25px;
+}
+table.chanchengChart2_right td{
+	border:1px solid;
+	height: 10px;
+}

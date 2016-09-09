@@ -1,0 +1,54 @@
+body {
+	background-color: #FFFFFF;
+	font-family: \5b8b\4f53;/*Verdana, Arial, Helvetica, sans-serif;*/
+	font-size:18px;
+	line-height:1.5;
+	scrollbar-3dlight-color: #F0F0EE;
+	scrollbar-arrow-color: #676662;
+	scrollbar-base-color: #F0F0EE;
+	scrollbar-darkshadow-color: #DDDDDD;
+	scrollbar-face-color: #E0E0DD;
+	scrollbar-highlight-color: #F0F0EE;
+	scrollbar-shadow-color: #F0F0EE;
+	scrollbar-track-color: #F5F5F5;
+}
+.shujuyuan_hide {
+	display: none;
+}
+
+p{
+	padding:0px;
+	margin:0px;
+	font-size:14px;
+	line-height:25px;
+}
+ol,ul{
+	padding:0;
+	margin-top:6px;
+	margin-bottom:6px;
+	}
+
+td {
+	font-family: \5b8b\4f53;/*Verdana, Arial, Helvetica, sans-serif;*/
+}
+
+pre {
+	font-family: \5b8b\4f53;/*Verdana, Arial, Helvetica, sans-serif;*/
+}
+
+
+.tablerow1 {
+	background-color: #BBBBBB;
+}
+
+thead {
+	background-color: #FFBBBB;
+}
+
+tfoot {
+	background-color: #BBBBFF;
+}
+
+th {
+	font-family: \5b8b\4f53;/*Verdana, Arial, Helvetica, sans-serif;*/
+}

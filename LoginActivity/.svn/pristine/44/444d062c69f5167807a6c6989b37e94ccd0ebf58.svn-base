@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#eaeaea"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:background="@color/header_bj"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+		<ListView
+	        android:id="@+id/biaoben_dialog"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0.0dp"
+	        android:layout_weight="1"
+	        android:dividerHeight="1dp"
+	        android:paddingLeft="0dp"
+	        android:paddingRight="0dp"
+	        android:paddingBottom="10dp"
+	        android:scrollbars="none"
+	        android:divider="#cccccc">
+		</ListView>
+	</LinearLayout>
+</LinearLayout>

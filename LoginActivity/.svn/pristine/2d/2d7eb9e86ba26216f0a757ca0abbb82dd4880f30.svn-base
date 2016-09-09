@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tiantanhehe.yidongchafang.views.activities.MainPatientActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp" >
+
+        <Button
+            android:id="@+id/bt_bingzhong"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_top_button_bg"
+            android:text="@string/main_bt_bingzhong"
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_yiban"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_top_button_bg"
+            android:text="@string/main_bt_yiban"
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/huanzhe_xuanze"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_sousuo_bg"
+            android:entries="@array/huanzhe_xuanze" />
+
+        <Spinner
+            android:id="@+id/zhuangtai_xuanze"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_sousuo_bg"
+            android:entries="@array/huanzhe_bingqing_zhuangtai" />
+
+        <EditText
+            android:id="@+id/edt_sousuo"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="2"
+            android:background="@drawable/main_sousuo_bg"
+            android:hint="@string/main_sousuo_hintcontent"
+            android:paddingLeft="5dp"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_sousuo"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_top_button_bg"
+            android:text="@string/main_bt_sousuo"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#C4E9FB"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/zanwu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="您所访问的病区，或住院状态暂无患者···"
+        android:textColor="#b3b3b3"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <GridView
+        android:id="@+id/patient_liebiao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:padding="10dp"
+        android:verticalSpacing="10dp" >
+    </GridView>
+
+    <LinearLayout
+        android:id="@+id/bottom_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fenye_layout_bottom"
+        android:layout_marginLeft="@dimen/fenye_layout_left"
+        android:layout_marginRight="@dimen/fenye_layout_right"
+        android:layout_marginTop="@dimen/fenye_layout_top"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Spinner
+            android:id="@+id/pages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fenye_spinner_padding" />
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fenye_detail_left"
+            android:textSize="@dimen/fenye_detail" />
+    </LinearLayout>
+
+</LinearLayout>

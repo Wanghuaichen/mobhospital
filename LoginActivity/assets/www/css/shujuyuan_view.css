@@ -1,0 +1,14 @@
+.shujuyuan {
+	color: blue;
+	cursor: pointer;
+	text-decoration: none;
+	border-bottom: 2px dotted ;
+}
+.shujuyuan_hide {
+	display: none;
+}
+
+.alert
+{
+	background:red;
+}

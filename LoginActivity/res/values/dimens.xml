@@ -1,0 +1,77 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="shadow_width">3dp</dimen>
+    <dimen name="slidingmenu_offset">50dp</dimen>
+    <dimen name="slidingmenu_width">320dp</dimen>
+    <dimen name="slidingmenu_offset_2">5dp</dimen>
+    <dimen name="key_height">50.0dip</dimen>
+    <dimen name="activity_vertical_TextSize">16dp</dimen>
+    <dimen name="activity_vertical_margin2">5dp</dimen>
+    <dimen name="shadow_size">8dip</dimen>
+    <dimen name="scroll_tab_row_height">80dip</dimen>
+    <dimen name="scroll_tab_row_width">80dip</dimen>
+    <dimen name="scroll_tab_column_width">145dip</dimen>
+    <dimen name="scroll_tab_title_height">40dip</dimen>
+    <dimen name="arcmenu_right_offset">-70dp</dimen>
+    <dimen name="arcmenu_bottom_offset">-70dp</dimen>
+    <dimen name="version_font_size">18sp</dimen>
+    <dimen name="fenye_detail">16sp</dimen>
+    <dimen name="fenye_detail_left">50dp</dimen>
+    <dimen name="fenye_spinner_padding">5dp</dimen>
+    <dimen name="fenye_layout_height">30dp</dimen>
+    <dimen name="fenye_layout_top">0dp</dimen>
+    <dimen name="fenye_layout_left">10dp</dimen>
+    <dimen name="fenye_layout_right">10dp</dimen>
+    <dimen name="fenye_layout_bottom">10dp</dimen>
+    <dimen name="title_text_size">18dp</dimen>
+
+    <!-- 住院总览 -->
+    <dimen name="zhuyuan_zonglan_fengexian_kuandu">1dp</dimen>
+    <dimen name="zhuyuan_zonglan_mokuai_jiange_daxiao">7dp</dimen>
+    <dimen name="zhuyuan_zonglan_zuobianju_daxiao">20dp</dimen>
+    <dimen name="zhuyuan_zonglan_biaoti_ziti_daxiao">18dp</dimen>
+    <dimen name="zhuyuan_zonglan_zhengwen_ziti_daxiao">16dp</dimen>
+    
+    <!-- 护理记录列表界面 -->
+    <dimen name="hulijilu_list_subtitle">18dp</dimen> <!-- 顶部小标题 -->
+    <dimen name="hulijilu_list_subtitle_shangxiabianjv">10dp</dimen><!-- 小标题上下边距 -->
+    <dimen name="hulijilu_list_zhengwen">15sp</dimen> <!-- 正文 -->
+    <dimen name="hulijilu_list_zhengwen_border">1dp</dimen><!-- 正文边框 -->
+    <dimen name="hulijilu_list_zhengwen_sahngxiabianjv">8dp</dimen><!-- 正文上下边距 -->
+    <dimen name="hulijilu_list_zhengwen_zuoyoubianjv">10dp</dimen><!-- 正文左右边距 -->
+	<!-- 查看医嘱界面 -->
+	<dimen name="chakanyizhu_marginLeft" >10dp</dimen>
+	<dimen name="chakanyizhu_marginTop" >8dp</dimen>
+	<dimen name="chakanyizhu_textsize_yiyuan" >25sp</dimen>
+	<dimen name="chakanyizhu_textsize_title" >16sp</dimen>
+	<dimen name="chakanyizhu_textsize_table" >25sp</dimen>
+	<dimen name="chakanyizhu_textsize_item" >12sp</dimen>
+	<dimen name="chakanyizhu_textsize_button" >13sp</dimen>
+	<dimen name="chakanyizhu_layout_height" >45dp</dimen>
+	<dimen name="chakanyizhu_layout_width_time" >100dp</dimen>
+	<dimen name="chakanyizhu_layout_width_sign" >60dp</dimen>
+	<dimen name="chakanyizhu_marginLeft_startPage" >10dp</dimen>
+	<dimen name="chakanyizhu_content_textsize" >14sp</dimen>
+	<!-- 体温记录列表界面 -->
+    <dimen name="tiwenjilu_list_subtitle">20sp</dimen> <!-- 顶部小标题 -->
+    <dimen name="tiwenjilu_list_subtitle_shangxiabianjv">10dp</dimen><!-- 小标题上下边距 -->
+    <dimen name="tiwenjilu_list_zhengwen">14sp</dimen> <!-- 正文 -->
+    <dimen name="tiwenjilu_list_zhengwen_border">1dp</dimen><!-- 正文边框 -->
+    <dimen name="tiwenjilu_list_zhengwen_sahngxiabianjv">8dp</dimen><!-- 正文上下边距 -->
+    <dimen name="tiwenjilu_list_zhengwen_zuoyoubianjv">10dp</dimen><!-- 正文左右边距 -->
+    
+    <!-- 病程记录列表界面 -->
+    <dimen name="bingcheng_tab_biaoti">18sp</dimen> <!-- 顶部标题 -->
+    
+    <!-- 检验检查列表界面 -->
+    <dimen name="jianyanjiancha_tab_biaoti">18sp</dimen> <!-- 顶部标题 -->
+    <dimen name="jianyanjiancha_content_textsize" >14sp</dimen>
+    
+    <!-- 应用集成界面 -->
+    <dimen name="key_height">50dip</dimen>
+    
+    <!-- 小扁鹊弹框高度和宽度 -->
+</resources>

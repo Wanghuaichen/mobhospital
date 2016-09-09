@@ -1,0 +1,303 @@
+/**************************************************
+*  Created:  2011-11-01
+*  Info:医嘱和处方管理前台CSS代码
+*  @Tiantanhehe (C)2011-3011 Tiantanhehe Inc.
+*  @Author DongJie <dj7229@126.com>
+*  @Cooperation Author YuanLin <yuanjinlin_2006@163.com> 
+*
+***************************************************/
+body {
+	margin:10px auto 0px auto;
+	font: 16px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+	background:url(./images/background.png);
+}
+h1, h2, h3, h4, h5, h6, p, form, input, ul, li{
+	margin:0;
+	padding:0;
+	border:none;
+}
+ul li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+}
+a img {
+	border:none;
+}
+.page {
+	margin:0px auto 0 20px;
+	padding-top:10px;
+	width:95%;
+	min-height:600px;
+}
+.page_break {
+	page-break-before:always;
+}
+.head_title {
+	text-align:center;
+	margin-bottom:20px;
+	font-weight:bold;
+}
+.main_title {
+	letter-spacing:25px;
+	text-align:center;
+	font-size:35px;
+	height:45px;
+}
+.sub_title {
+	letter-spacing:20px;
+	font-size:30px;
+	height:35px;
+	text-align:center;
+}
+.sub_title_long {
+	letter-spacing:15px;
+	font-size:30px;
+	height:35px;
+}
+.head_table {
+	font-size:18px;
+	line-height:1.2;
+	width:95%;
+	margin-bottom:15px;
+}
+.head_table .info_title {
+	text-align:right;
+	padding-right:2px;
+}
+.content_head_table .long_content {
+	padding-left:5px;
+}
+.content_table .qianming {
+	color:#999
+}
+.content_head_table .double_line {
+	padding-left:5px;
+	padding-right:5px;
+}
+.content_table {
+	width:95%;
+	font-size:14px;
+	line-height:2;
+	text-align:center;
+	color:#000;
+}
+.content_table .warning{
+	color:#F00;
+	}
+.content_table .new_added{
+	color:#3C0;
+	}
+.content_table .long_content {
+	text-align:left;
+	padding-left:5px;
+}
+.content_table .long_content span{
+	padding-left:5px;
+}
+.content_table .long_content .no_blank{
+	padding-left:0px;
+}
+.content_table .long_content .hide{
+	display:none;
+}
+.hide{
+	display:none;
+	}
+.long_content, [align=right] {
+	*margin-right: 5px;
+}
+.content_table .editable {
+	cursor:pointer;
+}
+.content_table .editable_focus {
+	cursor:pointer;
+	background-color:#CBF1C9;
+}
+.content_table .add_area {
+	text-align:left;
+	padding:5px;
+}
+.edit_table {
+	padding-bottom:10px;
+	display:none;
+	width:100%;
+	background:#f8fdfe;
+	font-size:14px;
+	text-align:left;
+}
+.edit_table span {
+	margin-left:15px;
+}
+.edit_table .info_title {
+	margin-left:20px;
+	font-weight:bold;
+}
+.edit_table .content {
+	width:70%;
+}
+.edit_button:hover {
+	background:url(./images/button_edit_menu_hover.png) no-repeat;
+}
+.add_button:hover {
+	background:url(./images/yizhuguanli_add_button_hover.png) no-repeat;
+}
+.error_tips {
+	background:url(./images/error_tips.gif) no-repeat;
+	margin-left:20px;
+	padding-left:20px;
+	height:16px;
+	line-height:16px;
+	text-align:left;
+	color:red;
+	margin-bottom:8px;
+}
+table {
+	border-collapse:collapse;
+	empty-cells:show;
+}
+.head_table .info_area {
+	border-bottom:1px solid #000;
+	text-align:left;
+	padding-left:2px;
+}
+.content_head_table {
+	width:95%;
+	font-size:16px;
+	line-height:1.5;
+	text-align:center;
+	font-weight:bold;
+	color:#06F;
+	/*border:1px solid #6C0;*/
+}
+/*
+.content_head_table>tr {
+	border:1px solid #6C0;
+}*/
+.content_head_table td {
+	border:1px solid #6C0;
+}
+.content_table tr {
+	/*border:1px solid #6C0;*/
+	/*border-bottom:none;*/
+	border: none;
+}
+.content_table td {
+	border-top:none;
+	border-left:1px solid #6C0;
+	border-right:1px solid #6C0;
+	border-bottom:1px solid #6C0;
+}
+.content_table .groupmate {
+	/*border-bottom:none;*/
+	border-top:1px dashed #6C0;
+	border-bottom:1px dashed #6C0;
+}
+.content_table .editable_on_edit {
+	cursor:pointer;
+	background-color:#AFF1C9;
+	/*border:1px dotted #06F;*/
+	border: none;
+}
+.content_table .editable_partly_on_edit {
+	cursor:pointer;
+	background-color:#AFF1C9;
+	/*border:1px dotted #06F;*/
+	border: none;
+}
+.none_border {
+	border:none;
+}
+.ajax_form
+{
+	border:none;	
+}
+.input_type {
+	width:20%;
+	border:1px solid #6ABEFD;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_focus {
+	width:20%;
+	border:1px solid #00F;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_small {
+	width:10%;
+	border:1px solid #6ABEFD;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_small_focus {
+	width:10%;
+	border:1px solid #00F;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_full {
+	width:85%;
+	border:1px solid #6ABEFD;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_full_focus {
+	width:85%;
+	border:1px solid #00F;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.select_type {
+	width:10%;
+	border:1px solid #6ABEFD;
+	height:22px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.edit_table li {
+	border-bottom:1px dotted #999;
+}
+.edit_button {
+	background:url(./images/button_edit_menu.png) no-repeat;
+	border:none;
+	height:30px;
+	line-height:23px;
+	width:73px;
+	text-align:center;
+	color:#fff;
+	cursor:pointer;
+	font-weight:bold;
+	margin:5px;
+}
+.add_button {
+	background:url(./images/yizhuguanli_add_button.png) no-repeat;
+	border:none;
+	height:25px;
+	line-height:23px;
+	width:16%;
+	text-align:center;
+	color:#fff;
+	cursor:pointer;
+	font-weight:bold;
+}
+.editble_partly {
+	cursor:pointer;
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hulijilu_list_dingbu_backgroung"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/hulijilu_list_subtitle_hulijibie"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="@dimen/hulijilu_list_subtitle_shangxiabianjv"
+            android:paddingTop="@dimen/hulijilu_list_subtitle_shangxiabianjv"
+            android:text="@string/hulijilu_list_subtitle_hulijibie"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/title_text_size" />
+
+        <TextView
+            android:id="@+id/hulijilu_list_subtitle_duiyingriqi"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:paddingBottom="@dimen/hulijilu_list_subtitle_shangxiabianjv"
+            android:paddingTop="@dimen/hulijilu_list_subtitle_shangxiabianjv"
+            android:text="@string/hulijilu_list_subtitle_duiyingriqi"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/title_text_size" />
+
+        <TextView
+            android:id="@+id/hulijilu_list_subtitle_beizhu"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="@dimen/hulijilu_list_subtitle_shangxiabianjv"
+            android:paddingTop="@dimen/hulijilu_list_subtitle_shangxiabianjv"
+            android:text="@string/hulijilu_list_subtitle_beizhu"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/title_text_size" />
+    </LinearLayout>
+
+    <com.tiantanhehe.yidongchafang.views.views.CustomListview
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp "
+        android:divider="@null" >
+    </com.tiantanhehe.yidongchafang.views.views.CustomListview>
+
+    <LinearLayout
+        android:id="@+id/bottom_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fenye_layout_bottom"
+        android:layout_marginLeft="@dimen/fenye_layout_left"
+        android:layout_marginRight="@dimen/fenye_layout_right"
+        android:layout_marginTop="@dimen/fenye_layout_top"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Spinner
+            android:id="@+id/pages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fenye_spinner_padding" />
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fenye_detail_left"
+            android:textSize="@dimen/fenye_detail" />
+    </LinearLayout>
+
+</LinearLayout>

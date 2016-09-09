@@ -1,0 +1,504 @@
+/* C
+-----------------------------------------------------------------------------------------------------------*/
+/* Bar: Toolbars, dividers, slider track */
+.ui-bar-c,
+.ui-page-theme-c .ui-bar-inherit,
+html .ui-bar-c .ui-bar-inherit,
+html .ui-body-c .ui-bar-inherit,
+html body .ui-group-theme-c .ui-bar-inherit {
+	background: #027fbd /*{c-bar-background-color}*/;
+	border-color: #dddddd /*{c-bar-border}*/;
+	color: #ffffff /*{c-bar-color}*/;
+	text-shadow: 0 /*{c-bar-shadow-x}*/ 0 /*{c-bar-shadow-y}*/ 0 /*{c-bar-shadow-radius}*/ #ffffff /*{c-bar-shadow-color}*/;
+	font-weight: bold;
+}
+.ui-bar-c {
+	border-width: 1px;
+	border-style: solid;
+}
+/* Page and overlay */
+.ui-overlay-c,
+.ui-page-theme-c,
+.ui-page-theme-c .ui-panel-wrapper {
+	background: #fff /*{c-page-background-color}*/;
+	border-color: #bbbbbb /*{c-page-border}*/;
+	color: #333333 /*{c-page-color}*/;
+	text-shadow: 0 /*{c-page-shadow-x}*/ 0 /*{c-page-shadow-y}*/ 0 /*{c-page-shadow-radius}*/ #f3f3f3 /*{c-page-shadow-color}*/;
+}
+/* Body: Read-only lists, text inputs, collapsible content */
+.ui-body-c,
+.ui-page-theme-c .ui-body-inherit,
+html .ui-bar-c .ui-body-inherit,
+html .ui-body-c .ui-body-inherit,
+html body .ui-group-theme-c .ui-body-inherit,
+html .ui-panel-page-container-c {
+	background: #fff /*{c-body-background-color}*/;
+	border-color: #c7c7c7 /*{c-body-border}*/;
+	color: #333333 /*{c-body-color}*/;
+	text-shadow: 0 /*{c-body-shadow-x}*/ 0 /*{c-body-shadow-y}*/ 0 /*{c-body-shadow-radius}*/ #f3f3f3 /*{c-body-shadow-color}*/;
+}
+.ui-body-c {
+	border-width: 1px;
+	border-style: solid;
+}
+/* Links */
+.ui-page-theme-c a,
+html .ui-bar-c a,
+html .ui-body-c a,
+html body .ui-group-theme-c a {
+	color: #333 /*{c-link-color}*/;
+	font-weight: bold;
+	text-decoration:none;
+}
+.ui-page-theme-c a:visited,
+html .ui-bar-c a:visited,
+html .ui-body-c a:visited,
+html body .ui-group-theme-c a:visited {
+    color: #333 /*{c-link-visited}*/;
+}
+.ui-page-theme-c a:hover,
+html .ui-bar-c a:hover,
+html .ui-body-c a:hover,
+html body .ui-group-theme-c a:hover {
+	color: #005599 /*{c-link-hover}*/;
+}
+.ui-page-theme-c a:active,
+html .ui-bar-c a:active,
+html .ui-body-c a:active,
+html body .ui-group-theme-c a:active {
+	color: #333 /*{c-link-active}*/;
+}
+/* Button up */
+.ui-page-theme-c .ui-btn,
+html .ui-bar-c .ui-btn,
+html .ui-body-c .ui-btn,
+html body .ui-group-theme-c .ui-btn,
+html head + body .ui-btn.ui-btn-c,
+/* Button visited */
+.ui-page-theme-c .ui-btn:visited,
+html .ui-bar-c .ui-btn:visited,
+html .ui-body-c .ui-btn:visited,
+html body .ui-group-theme-c .ui-btn:visited,
+html head + body .ui-btn.ui-btn-c:visited {
+	background: /*{c-bup-background-color}*/;
+	border-width:0px; /*{c-bup-border}*/;
+	color: #ffffff /*{c-bup-color}*/;
+	text-shadow: 0 /*{c-bup-shadow-x}*/ 0 /*{c-bup-shadow-y}*/ 0 /*{c-bup-shadow-radius}*/ #f3f3f3 /*{c-bup-shadow-color}*/;
+}
+/* Button hover */
+.ui-page-theme-c .ui-btn:hover,
+html .ui-bar-c .ui-btn:hover,
+html .ui-body-c .ui-btn:hover,
+html body .ui-group-theme-c .ui-btn:hover,
+html head + body .ui-btn.ui-btn-c:hover {
+	background:/*{c-bhover-background-color}*/;
+	border-width:0px; /*{c-bhover-border}*/;
+	/*border-right:0px;*/
+	color: #ffffff /*{c-bhover-color}*/;
+	text-shadow: 0 /*{c-bhover-shadow-x}*/ 0px /*{c-bhover-shadow-y}*/ 0 /*{c-bhover-shadow-radius}*/ #f3f3f3 /*{c-bhover-shadow-color}*/;
+}
+/* Button down */
+.ui-page-theme-c .ui-btn:active,
+html .ui-bar-c .ui-btn:active,
+html .ui-body-c .ui-btn:active,
+html body .ui-group-theme-c .ui-btn:active,
+html head + body .ui-btn.ui-btn-c:active {
+	background: #e8e8e8 /*{c-bdown-background-color}*/;
+	border-color: #dddddd /*{c-bdown-border}*/;
+	color: #333333 /*{c-bdown-color}*/;
+	text-shadow: 0 /*{c-bdown-shadow-x}*/ 1px /*{c-bdown-shadow-y}*/ 0 /*{c-bdown-shadow-radius}*/ #f3f3f3 /*{c-bdown-shadow-color}*/;
+}
+/* Active button */
+.ui-page-theme-c .ui-btn.ui-btn-active,
+html .ui-bar-c .ui-btn.ui-btn-active,
+html .ui-body-c .ui-btn.ui-btn-active,
+html body .ui-group-theme-c .ui-btn.ui-btn-active,
+html head + body .ui-btn.ui-btn-c.ui-btn-active,
+/* Active checkbox icon */
+.ui-page-theme-c .ui-checkbox-on:after,
+html .ui-bar-c .ui-checkbox-on:after,
+html .ui-body-c .ui-checkbox-on:after,
+html body .ui-group-theme-c .ui-checkbox-on:after,
+.ui-btn.ui-checkbox-on.ui-btn-c:after,
+/* Active flipswitch background */
+.ui-page-theme-c .ui-flipswitch-active,
+html .ui-bar-c .ui-flipswitch-active,
+html .ui-body-c .ui-flipswitch-active,
+html body .ui-group-theme-c .ui-flipswitch-active,
+html body .ui-flipswitch.ui-bar-c.ui-flipswitch-active,
+/* Active slider track */
+.ui-page-theme-c .ui-slider-track .ui-btn-active,
+html .ui-bar-c .ui-slider-track .ui-btn-active,
+html .ui-body-c .ui-slider-track .ui-btn-active,
+html body .ui-group-theme-c .ui-slider-track .ui-btn-active,
+html body div.ui-slider-track.ui-body-c .ui-btn-active {
+	background-color: #e8e8e8 /*{c-active-background-color}*/;
+	border-color: #3388cc /*{c-active-border}*/;
+	color: #ffffff /*{c-active-color}*/;
+	text-shadow: 0 /*{c-active-shadow-x}*/ 1px /*{c-active-shadow-y}*/ 0 /*{c-active-shadow-radius}*/ #005599 /*{c-active-shadow-color}*/;
+}
+/* Active radio button icon */
+.ui-page-theme-c .ui-radio-on:after,
+html .ui-bar-c .ui-radio-on:after,
+html .ui-body-c .ui-radio-on:after,
+html body .ui-group-theme-c .ui-radio-on:after,
+.ui-btn.ui-radio-on.ui-btn-c:after {
+	border-color: #3388cc /*{c-active-background-color}*/;
+}
+/* Focus */
+.ui-page-theme-c .ui-btn:focus,
+html .ui-bar-c .ui-btn:focus,
+html .ui-body-c .ui-btn:focus,
+html body .ui-group-theme-c .ui-btn:focus,
+html head + body .ui-btn.ui-btn-c:focus,
+/* Focus buttons and text inputs with div wrap */
+.ui-page-theme-c .ui-focus,
+html .ui-bar-c .ui-focus,
+html .ui-body-c .ui-focus,
+html body .ui-group-theme-c .ui-focus,
+html head + body .ui-btn-c.ui-focus,
+html head + body .ui-body-c.ui-focus {
+	-webkit-box-shadow: 0 0 12px #3388cc /*{c-active-background-color}*/;
+	-moz-box-shadow: 0 0 12px #3388cc /*{c-active-background-color}*/;
+	box-shadow: 0 0 12px #3388cc /*{c-active-background-color}*/;
+}
+/*防微信箭头开始*/
+div.speech {
+ margin: 5px 0;
+ padding: 8px;
+ table-layout: fixed;
+ word-break: break-all;
+ position: relative;
+ background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#ffffff), color-stop(0.1, #ececec), color-stop(0.5, #dbdbdb), color-stop(0.9, #dcdcdc), to(#8c8c8c) );
+ border: 1px solid #989898;
+ -webkit-border-radius: 8px;
+ -moz-border-radius: 8px;
+ border-radius: 8px;
+ font-size:14px;
+}
+div.speech:before {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ left: 15px;
+ top: -20px;
+ border: 10px solid;
+ border-color: transparent transparent #989898 transparent;
+}
+div.speech:after {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ left: 17px;
+ top: -16px;
+ border: 8px solid;
+ border-color: transparent transparent #ffffff transparent;
+}
+div.speech.right {
+ box-shadow: -2px 2px 5px #CCC;
+ margin-right: 10px;
+ width: 75%;
+ float: right;
+ background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#ffffff), color-stop(0.1, #eae8e8), color-stop(0.4, #E3E3E3), color-stop(0.8, #DFDFDF), to(#D9D9D9) );
+}
+div.speech.right:before {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ top: 9px;
+ bottom: auto;
+ left: auto;
+ right: -10px;
+ border-width: 9px 0 9px 10px;
+ border-color: transparent #989898;
+}
+div.speech.right:after {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ top: 10px;
+ bottom: auto;
+ left: auto;
+ right: -8px;
+ border-width: 8px 0 8px 9px;
+ border-color: transparent #dfdfdf;
+}
+div.speech.left {
+ box-shadow: 2px 2px 2px #CCCCCC;
+ margin-left: 10px;
+ width: 75%;
+ float: left;
+ background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#e4ffa7), color-stop(0.1, #bced50), color-stop(0.4, #aed943), color-stop(0.8, #a7d143), to(#99BF40) );
+}
+div.speech.left:before {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ top: 9px;
+ bottom: auto;
+ left: -10px;
+ border-width: 9px 10px 9px 0;
+ border-color: transparent #989898;
+}
+div.speech.left:after {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ top: 10px;
+ bottom: auto;
+ left: -8px;
+ border-width: 8px 9px 8px 0;
+ border-color: transparent #acd643;
+}
+.leftimg {
+ float: left;
+ margin-top: 10px;
+}
+.rightimg {
+ float: right;
+ margin-top: 10px;
+}
+.leftd {
+ clear: both;
+ float: left;
+}
+.rightd {
+ clear: both;
+ float: right;
+}
+
+
+/*箭头结束*/
+/*中间样式*/
+.linetd {
+ clear: both;
+}
+div.linecenter {
+ margin: 5px auto;
+ table-layout: fixed;
+ word-break: break-all;
+ position: relative;
+ background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#c1beac), color-stop(0.1, #c1beac), color-stop(0.5, #c1beac), color-stop(0.9, #c1beac), to(#c1beac) );
+ border: 1px solid #c1beac;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ border-radius: 3px;
+ width:70px;
+ font-size:10px;
+ font-weight:lighter;
+ text-align:center;
+ color:#fff;
+}
+/*登录页面*/
+.login_logo { margin:0 auto; margin-top:20%; width:90%; height:auto; text-align:center;}
+.login_text {margin:0 auto; margin-top:50px; padding:0px; width:90%; height:100px; overflow:hidden; background-color:#FFF; border:1px solid #A6B1B5;border-radius:8px;}
+.login_username { padding:0px; width:100%; height:48px; border-bottom:1px solid #A6B1B5; background:url(../images/user.png) no-repeat center right;}
+.login_username_input { margin:10px; height:25px; line-height:25px; width:85%; border:0px; }
+.login_paw { width:100%; height:48px;background:url(../images/paw.png) center right no-repeat;}
+.login_tijiao {margin:0 auto; margin-top:30px; padding:0px; width:90%; height:auto; overflow:hidden; text-align:center;}
+.login_submit { background-color:#017EB9; border:0px; height:45px; line-height:40px; width:100%;border-radius:5px; color:#FFF; letter-spacing:2px;}
+.login_submit:active {background-color:#017Aa0;}
+input:focus  { border:0px; }
+.login_tips { margin:0 auto; width:90%; line-height:30px; height:30px;}
+#right {background-color:#FaFaFa}
+.message_content { margin-top:8px; padding:5px; border:1px solid #ccc; background-color:#FFF;border-radius:5px;}
+#yizhu_content { margin:10px; margin-top:0px;}
+#yizhu_content a {font-size:14px; font-weight:500;}
+/*账户管理*/
+.data_list tr td.td_right{ text-align:right; color:#a0a0a0;}
+.data_list tr td.td_left{ text-align:left;padding-left:15px;}
+/*患者列表*/
+.cheng,.fen,.lan,.lv,.hong,.bai{font-weight:lighter;padding:1px;border:1px solid #a4b0b6;font-size:12px; background-color:#FFF;}
+.cheng{color:#f19149;}
+.fen{color:#ea68a2;}
+.lan{color:#5f52a0;}
+.lv{color:#22ac38;}
+.hong{color:#f00;}
+.bai{color:#fff;}
+
+.huanzhe_list{width:100%; border-collapse:collapse; height:100px;}
+.huanzhe_list_img{ background:#f9fdfe; border-bottom:1px solid #edf1f5; border-right:1px solid #edf1f5; text-align:center;}
+.huanzhe_list_text{ border-bottom:1px solid #cfdae5; padding-left:5px;}
+.huanzhe_list_text .n1{line-height:30px; font-weight:lighter;}
+.huanzhe_list_text .n2{width:100%;line-height:25px;center;color:#808081;font-size:12px; font-weight:lighter;text-overflow: ellipsis;overflow:hidden;}
+.huanzhe_list_biao{ border-bottom:1px solid #cfdae5; text-align:center; padding-right:5px;}
+
+.huanzhe_list_bingfang {height:30px;line-height:30px;background:#95a3a6;color:#FFF; text-indent:10px;}
+.huanzhe_list_gengduo {margin-top:10px;height:60px; background:#95a3a6; width:100%; text-align:center; line-height:50px; font-size:16px; letter-spacing:2px; font-weight:700; color:#FFF;}
+.huanzhe_list_right_gengduo {margin-top:10px;height:60px; background:#95a3a6; width:100%; text-align:center; line-height:50px; font-size:16px; letter-spacing:2px; font-weight:700; color:#FFF;}
+.huanzhe_list_gengduo:active {background-color:#EAEAEA;}
+
+.bingli_content_shoushu_all:active {background-color:#EAEAEA;}
+
+
+.huanzhe_list_xiaobiao{ display:inline-block; margin-right:16px; width:20%; float:right;}
+.huanzhe_list_xiaobiao ul{ padding:0px; margin:0px; margin-top:5px;}
+.huanzhe_list_xiaobiao ul li{list-style-type:none; float:left;margin:1px; font-size:12px;}
+
+
+
+
+
+.huanzhe_list_head_h1 { margin:0px; padding:0px; width:160px;}
+.huanzhe_list_search_block { width:100%; height:150px; overflow:hidden; position:fixed; top:0px; z-index:999; background-color:#fff; display:none;}
+.huanzhe_list_search_table { margin:0 auto;border-collapse:collapse; width:90%;}
+.huanzhe_list_search_table_input { width:80%; text-align:center;}
+.huanzhe_list_search_table_tijiao { margin-top:3px;width:20%; letter-spacing:5px; margin-left:10px; float:left;}
+.huanzhe_list_search_type {margin:0 auto; padding:0px;border-collapse:collapse; width:100%; background-color:#EAEAEA; border-bottom:1px solid #CCC;}
+.huanzhe_list_search_type tr td { margin:0px; padding:0px;border-collapse:collapse; color:#000; width:25%; height:40px; line-height:40px; text-align:center; font-size:14px; border:1px solid #CCC; border-top:0px; border-bottom:0px;}
+.huanzhe_list_search_yincang { background-color:#EAEAEA; text-align:center; height:30px; line-height:30px; width:100%;}
+.huanzhe_list_search_yincang:active { background-color:#CCC;}
+.huanzhe_list_search_type_check { background-color:#FFF;}
+.huanzhe_list_search { position:fixed; top:50px; left:1px; right:0px;}
+
+/*病历浏览*/
+.bingli_content { margin:0px 5px 0px 5px; padding:0px;}
+.bingli_head_chakan { padding:0px; color:#FFF; line-height:30px; font-weight:500; letter-spacing:2px;}
+.bingli_head_chakan:active {background-color:#017Aa0;}
+.bingli_head_chakan_img { margin-top:6px; height:22px; float:left;}
+.bingli_head_chakan_text { margin-left:5px; height:35px; line-height:33px; float:left; font-size:18px;}
+.bingli_head_right { border:1px solid #000; float:right;}
+#beizhu {filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
+.bingli_head_right_img { margin:8px 10px auto 8px; height:22px; float:left;}
+
+.bingli_content_jichu { height:45px; width:100%; border-bottom:1px solid #666;}
+.bing_content_jichu_info { height:100%; width:100%; border-collapse:collapse;}
+.bing_content_jichu_info tr td {border-collapse:collapse; text-align:center;}
+.bingli_content_jichu_info { padding:5px 10px; border-bottom:1px solid #CCC;}
+#bingchengjilu_show { display:none;}
+.huanzhe_yizhu_table {margin:0 auto; margin-top:30%; padding:0px;border-collapse:collapse; width:95%; background-color:#EAEAEA; border:1px solid #CCC;}
+.huanzhe_yizhu_table tr td {margin:0px; padding:0px;border-collapse:collapse; color:#000; height:40px; font-size:14px; border:1px solid #CCC;}
+.huanzhe_yizhu_table_name { text-align:center; width:25%;}
+.huanzhe_yizhu_table_content { text-align:left;}
+.huanzhe_sancedan_table {margin:0 auto; margin-top:5px; padding:0px;border-collapse:collapse; width:95%; background-color:#D8E5FF;}
+.huanzhe_sancedan_table tr td { width:33%; text-align:center; font-size:16px; height:40px; line-height:40px;}
+.huanzhe_sancedan_content_table {margin:0 auto; margin-top:5px; padding:0px;border-collapse:collapse; width:95%; border:1px solid #C5EBFD;}
+.huanzhe_sancedan_content_table tr td {text-align:center; font-size:14px; height:40px; border:1px solid #C5EBFD;}
+.huanzhe_sancedan_content_table tr:active {background-color:#EAEAEA;}
+
+.bingli_content_shoushu {margin-top:15px; height:30px; line-height:30px; text-indent:15px; font-weight:500; background-color:#95A3A6; color:#FFF; letter-spacing:2px;}
+.bingli_content_shoushu_all { border-bottom:1px solid #999; height:45px; line-height:45px; text-align:center;}
+.bingli_content_shoushu_all_zhenduan { border-bottom:1px dotted #999; height:45px; line-height:45px; text-align:center;}
+/*右侧备注*/
+ul.bingli_beizhu li{list-style-type:none; display:inline; padding:0 5px;}
+ul.bingli_beizhu li img{width:40%}
+ul.bingli_beizhu li img.img_center{margin-bottom:30px;}
+
+/*底部*/
+.footer_list { padding:0px; width:100%; height:70px;}
+.footer_list ul { margin:0px; padding:0px; list-style:none;}
+.footer_list ul li { margin:0px; margin-top:5px; padding:0px; float:left; height:60px; width:20%; text-align:center;}
+.footer_list ul li img { height:60px;}
+.ui-panel-inner{padding:0px;}
+
+/*聊天底部*/
+.liaotian_footer { padding:0px; width:100%; height:70px;}
+.liaotian_footer ul { margin:0px; padding:0px; list-style:none;}
+.liaotian_footer ul li { margin:0px; margin-top:5px; padding:0px; float:left; height:60px; width:33%; text-align:center;}
+.liaotian_footer ul li img { height:60px;}
+
+
+/*影像*/
+.yingxiang_list{width:100%;border-bottom:1px solid #95a2aa; padding:10px 0;}
+.yingxiang_list span{color:#4b5d67; font-weight:bolder;margin-left:20px;height:30px; line-height:30px; display:inline;}
+
+/*体征录入*/
+.tizheng_class{ padding:5px 10px; background:#4b5c66;}
+.tizheng_class ul{padding:0; margin:0;}
+.tizheng_class ul li{ list-style-type:none; float:left;font-weight:lighter; line-height:20px; padding:6px; background:#FFF;border-radius:5px; color:#000; margin:2px; cursor:pointer;}
+.tizheng_class ul li:active{background-color:#017Aa0; color:#fff;}
+
+.tizheng_class2{ padding:5px 10px; background:#4b5c66;}
+.tizheng_class2 ul{padding:0; margin:0;}
+.tizheng_class2 ul li{ list-style-type:none; float:left;font-weight:lighter; line-height:20px; padding:6px; background:#FFF;border-radius:5px; color:#000; margin:2px; cursor:pointer;}
+.tizheng_class2 ul li:active{background-color:#017Aa0; color:#fff;}
+
+table.tizheng_list{width:100%;border-collapse:collapse;}
+.tizheng_list tr th{ text-align:center;line-height:30px; background:#4b5c66;color:#FFF;border:1px solid #ccc;}
+.tizheng_list tr td{ text-align:center;line-height:24px; border:1px solid #ccc;padding:0 2px; font-size:14px;}
+.shurukuang{width:50px;height:26px;line-height:26px; border:1px solid #f00;display:inline-block;overflow:auto;text-align:center;}
+.shurukuang2{width:50px;height:26px;line-height:26px; border:1px solid #ccc;display:inline-block;overflow:auto;text-align:center;}
+.danwei{height:26px;line-height:26px;float:right;}
+
+.patient_jump {
+	cursor:pointer;
+}
+
+
+/*键盘*/
+.jianpan{padding:0 10px;}
+table.jianpan_top,table.jianpan_main{width:100%;}
+table.jianpan_top tr td{ background:#017Aa0; text-align:center;font-family:微软雅黑; font-weight:lighter;border-radius:3px; color:#fff;}
+table.jianpan_top tr td:active {background-color:#fff;color:#000;}
+table.jianpan_main tr td{ background:#fff; color:#333; text-align:center; width:20%;border-radius:5px; font-family:微软雅黑; cursor:pointer;}
+table.jianpan_main tr td:active{background-color:#017Aa0; color:#fff;}
+
+.p_class{border-top:1px solid #95a2aa;border-bottom:1px solid #95a2aa; height:30px; margin-top:4px; line-height:30px;}
+.p_class span img{ vertical-align:middle; height:20px; margin-bottom:3px;}
+.p_class span.p_class_n1{ margin-left:20px; color:#FFF; font-weight:lighter;}
+.p_class span.p_class_n2{ margin-left:20px; color:#FFF;font-weight:lighter;}
+.p_class span.p_class_n3{ float:right; margin-right:20px;}
+
+/*医嘱摆药*/
+.baiyao_list{width:100%;}
+.baiyao_list tr td{border-bottom:1px solid #c7c7c7; height:40px;}
+
+/*主页左侧*/
+.user_info{padding:0px; margin:0px;}
+.user_info li{ list-style-type:none; line-height:24px; border-bottom:1px dashed #ccc;}
+
+/*联系人*/
+.user_box{width:100%;line-height:40px; font-weight:600;margin-top:5px;background-color:#279bce; color:#fff;text-indent:5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;cursor:pointer;}
+.user_box:active{background-color:#027fbd;}
+.contacts_user_list{background-color:#e6e6e6; padding-top: 5px; margin-top: 5px; margin-left: 5%; min-height: 30px; width: 90%;overflow: hidden; border-radius: 5px; font-weight:normal;}
+.contacts_user_list:active{background-color:#279bce; color:#FFF;}
+.chaxun{background:#279bce; color:#FFF;border-radius:3px; margin-left:5px;line-height:30px;margin-top:7px; cursor:pointer;}
+.chaxun:active{background:#027fbd;}
+
+/*小扁鹊*/
+.search_class{ padding:0; margin:0 auto; width:240px;}
+.search_class li{ list-style-type:none; display:inline; color:#363685;line-height:26px; padding:0px 2px;}
+
+.wenyiwen{background:#279bce; color:#FFF;cursor:pointer; border-radius:3px; margin-left:5px;line-height:30px; margin-top:5px;}
+.wenyiwen:active{background:#027fbd;}
+
+/*检查*/
+table.title_table{ border-collapse:collapse; margin-bottom:5px;}
+table.title_table tr td { border:1px solid #27a3f9; height:50px; text-align:center;}
+table.title_table tr td input{ border:1px solid #ccc; border-radius:0px; width:90%}
+
+.content_table{ border-collapse:collapse;}
+.content_table tr td{ border:1px solid #c5dbf2; height:50px; text-align:center}
+.page_list{margin:10px 0px;}
+.page_list div{color:#000; line-height:24px; border:1px solid #CCC; padding:2px; text-align:center; display:inline-block;}
+.page_list div:active{background:#027fbd;}
+.jiancha_search{background:#279bce; border-radius:3px; color:#FFF;}
+.jiancha_search:active{background:#027fbd;}
+
+/*医嘱摆药*/
+.yizhu_baiyao_shaixuan { margin:0 auto; margin-top:10px; padding:0px; width:95%; height:auto; overflow:hidden; border:1px solid #27A3F9;border-radius:10px;}
+.yizhu_baiyao_shaixuan tr td { height:34px;}
+.yizhu_baiyao_shaixuan_name { font-size:14px; width:20%; text-align:center; height:20px;}
+.yizhu_baiyao_shaixuan_input { width:30%; overflow:hidden; height:20px;}
+.yizhu_baiyao_shaixuan_input input { width:95%; border:1px solid #ccc;border-radius:3px; height:22px; line-height:22px; font-size:12px;}
+
+.yizhu_baiyao_list {margin:0 auto; margin-top:10px; padding:0px; width:96%; height:40px; border:1px solid #27A3F9; background-color:#D8E5FF;border-collapse:collapse;}
+.yizhu_baiyao_list tr td {border-collapse:collapse;border:1px solid #27A3F9; line-height:40px; text-align:center; font-size:14px;}
+.yizhu_baiyao_list_page {margin:0 auto; margin-top:0px; margin-bottom:10px; padding:0px; width:96%; height:auto; border:1px solid #C5DBF2; border-collapse:collapse;}
+.yizhu_baiyao_list_content {margin:0 auto; margin-top:5px; margin-bottom:5px; padding:0px; width:96%; height:auto; border:1px solid #C5DBF2; border-collapse:collapse;}
+.yizhu_baiyao_list_content tr td {border-collapse:collapse;border:1px solid #C5DBF2; font-size:14px;}
+.yizhu_baiyao_list_content tr:active{background:#EAEAEA;}
+.yizhu_baiyao_list_content_name { width:70%; float:left; line-height:20px; text-align:left; text-indent:0px; font-size:14px;text-overflow: ellipsis;overflow:hidden;white-space:nowrap;}
+.yizhu_baiyao_list_content_ciliang { width:30%; float:left; line-height:20px; text-align:right; font-size:14px;text-overflow: ellipsis;overflow:hidden;white-space:nowrap;}
+.yizhu_baiyao_list_content_yongfa { padding:0px;width:80%; float:left; height:25px; line-height:25px; text-align:right; font-size:14px;text-overflow: ellipsis;overflow:hidden;white-space:nowrap;}
+.yizhu_baiyao_list_content_finish {width:20%;float:right;line-height:20px; text-align:right; font-size:14px;}
+
+/*退出*/
+.logout{background:#279bce; color:#FFF;cursor:pointer; border-radius:3px; width:90px; line-height:30px; margin-top:15px; text-align:center}
+.logout:active{background:#027fbd;}

@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font-family:"微软雅黑" Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#000;
+	background:url(images/background.png);
+	margin:0;
+	padding:0;
+}
+div, p, h1, h2, h3, h4, h5, h6, form, input, button, ul, li, dl, dt, dd {
+	margin:0;
+	padding:0;
+}
+ul li {
+	list-style:none;
+}
+.calculator_body {
+	width:650px;
+	padding:10px;
+}
+.calculator_menu {
+	font-size:14px;
+	padding:5px 2px 5px 2px;
+	background:#fafed4;
+	border:1px dashed #92d050;
+}
+
+.calculator_menu a {
+	color:#666;
+}
+.calculator_sub_menu {
+	margin:10px 0;
+	border:1px dashed #92d050;
+	color:#333;
+}
+.calculator_sub_menu .calculator_sub_menu_title {
+	height:30px;
+	line-height:30px;
+	font-size:16px;
+	font-weight:bold;
+	padding:0 5px;
+	background:#fafed4;
+}
+.calculator_sub_menu .calculator_sub_menu_content a {
+	padding:5px;
+	color:#333;
+}
+.calculator_menu a:hover, .calculator_sub_menu_content a:hover {
+	color:#004ca7;
+}
+.calculator_sub_title {
+	text-align:center;
+	padding:10px 0;
+	font-size:18px;
+	color:#003;
+	clear:both;
+}
+.unit_selector {
+	padding-left:10px;
+	padding-bottom:5px;
+}
+input {
+	vertical-align:middle;
+}
+.calculator_talbe {
+	border-left:1px solid #92d050;
+	border-top:1px solid #92d050;
+	width:100%;
+}
+.calculator_talbe tr td {
+	padding:5px;
+	border-right:1px solid #92d050;
+	border-bottom:1px solid #92d050;
+	height:18px;
+}
+.calculator_talbe tr td input {
+	height:18px;
+}
+.calculator_talbe_sub_title {
+	font-weight:600;
+	font-size:14px;
+	background:#fafed4;
+}
+.unit{
+	padding-left:2px;
+	}
+.attach_title {
+	padding:0 0 0 5px;
+	font-size:16px;
+	margin-top:20px;
+	color:#004ca7;
+	height:30px;
+	line-height:30px;
+}
+.attach_content {
+	padding:10px 20px;
+	border-top:2px dashed #ccc;
+	line-height:18px;
+	color:#444;
+}
+.result {
+	width:120px;
+}
+
+.calculate_tips {
+	font-size:12px;
+	color:#888;
+	height:18px;
+	padding-left:5px;
+}
+.on_error {
+	font-size:12px;
+	height:18px;
+	line-height:18px;
+	color:red;
+	padding-left:5px;
+}
+.calculate_tip_normal {
+	font-size:12px;
+	height:18px;
+	line-height:18px;
+	color:#91c11a;
+	padding-left:5px;
+}

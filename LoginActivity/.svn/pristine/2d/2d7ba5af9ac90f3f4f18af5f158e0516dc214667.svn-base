@@ -1,0 +1,162 @@
+/**************************************************
+*  Created:  2011-11-01
+*  Info:医嘱和处方管理前台CSS代码
+*  @Tiantanhehe (C)2011-3011 Tiantanhehe Inc.
+*  @Author DongJie <dj7229@126.com>
+*  @Cooperation Author YuanLin <yuanjinlin_2006@163.com> 
+*
+***************************************************/
+html, body {
+	margin:0;
+	padding:0;
+	font-family:"宋体" Arial, Helvetica, sans-serif;
+	font-size:18px;
+	color:#000;
+}
+body { margin:10px; background-color:#FFF;}
+h1, h2, h3, h4, h5, h6, p, form, input, ul, li, dl, dt, dd {
+	margin:0;
+	padding:0;
+	border:none;
+}
+ul li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+}
+a img {
+	border:none;
+}
+table {
+	table-layout:fixed;
+	border-collapse:collapse;
+	empty-cells:show;
+	word-wrap:break-word;
+}
+
+.list_title {
+	margin:0px;
+	background:url(./images/list_title.png) no-repeat;
+	border-bottom:3px solid #27a3f9;
+	width:700px;
+	height:33px;
+	line-height:33px;
+	font-size:14px;
+	font-weight:900;
+	color:#fff;
+	overflow:hidden;
+}
+.list_title_span {
+	margin-left:35px;
+	width:auto;
+	float:left;
+	padding-right:15px;
+	height:34px;
+	line-height:34px;
+	overflow:hidden;
+	letter-spacing:2px;
+	background-color:#2ba5fa;
+}
+.analysis_form_table {
+	width:700px;
+	table-layout:fixed;
+	border-top:1px solid #ddd;
+	font-size:16px;
+	line-height:24px;
+	height:24px;
+}
+.analysis_form_table tr td {
+	border-bottom:1px solid #ddd;
+	padding-bottom:5px;
+	padding-top:5px
+}
+.analysis_form_table .sub_title {
+	background:#e1f7ab;
+	padding-left:20px;
+	padding-top:5px;
+	color:#444;
+	font-weight:bold;
+}
+.analysis_form_table .info_title {
+	text-align:right;
+	padding-right:10px;
+}
+.analysis_form_table .info_sub_title {
+	text-align:center;
+	border-left:1px dashed #CCC;
+}
+.analysis_form_table .info_input {
+	text-align:left;
+	padding-left:5px;
+	border-left:1px dashed #CCC;
+	line-height:40px;
+}
+.analysis_form_table .select_type{
+	min-width:100px;
+	max-width:200px;
+	line-height:1.2;
+	font-size:16px;
+	border:#333 solid 1px;
+}
+.analysis_form_table .input_type{
+	width:150px;
+	line-height:1.2;
+	height:22px;
+	font-size:16px;
+	border:#333 solid 1px;
+}
+.analysis_form_table .table_chart {
+	width:690px;
+	height:350px;
+	margin:5px;
+}
+.analysis_form_table .table_chart_error_tips {
+	width:690px;
+	height:350px;
+	margin:5px;
+	font-size:18px;
+	color:#FD6922;
+	text-align:left;
+	font-weight:bold;
+}
+.action_button{
+	background:url(./images/02.png) no-repeat;
+	width:70px;
+	height:25px;
+	margin-left:30px;
+	line-height:25px;
+	font-size:14px;
+	font-weight:600;
+	cursor:pointer;
+	border:none;
+	text-align:center;
+	color:#000;
+}
+.action_button:hover {
+	background:url(./images/02-1.png) no-repeat;
+}
+.table_title {
+	margin:0px;
+	width:700px;
+	border:1px solid #C9DDE4;
+	background:#F1FAF0;
+	line-height:35px;
+	font-size:15px;
+	color:#075587;
+	letter-spacing:3px;
+	margin-bottom:10px;
+}
+.table_title a {
+	margin-left:15px;
+}
+.table_title b {
+	margin-left:15px;
+}
+.check_box_tag{
+	padding-left:5px;
+	padding-right:20px;
+}

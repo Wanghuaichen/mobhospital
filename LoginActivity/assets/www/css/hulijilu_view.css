@@ -1,0 +1,273 @@
+/**************************************************
+*  Created:  2012-11-26
+*  Info:护理记录前台CSS代码
+*  @Tiantanhehe (C)2011-3011 Tiantanhehe Inc.
+*  @Author DongJie <dj7229@126.com>
+*
+***************************************************/
+body {
+	margin:10px auto 0px auto;
+	font: 16px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+	background:url(./images/background.png);
+	color:#FFF;
+}
+h1, h2, h3, h4, h5, h6, p, form, input, ul, li{
+	margin:0;
+	padding:0;
+	border:none;
+}
+.page{
+	margin:0px auto 0px auto;
+	width:95%;
+}
+
+table {
+	border-collapse:collapse;
+	empty-cells:show;
+}
+.table_title {
+	text-align:left;
+	letter-spacing:0px;
+	text-indent: 2px
+}
+
+.edit_table {
+	padding-bottom:10px;
+	display:none;
+	width:100%;
+	background:#f8fdfe;
+	font-size:14px;
+	text-align:left;
+}
+.edit_table span {
+	margin-left:15px;
+}
+.edit_table .info_title {
+	margin-left:20px;
+	font-weight:bold;
+}
+.edit_table .content {
+	width:70%;
+}
+.edit_button:hover {
+	background:url(./images/yizhuguanli_edit_button_hover.png) no-repeat;
+}
+.add_button:hover {
+	background:url(./images/yizhuguanli_add_button_hover.png) no-repeat;
+}
+.error_tips {
+	background:url(./images/error_tips.gif) no-repeat;
+	margin-left:20px;
+	padding-left:20px;
+	height:16px;
+	line-height:16px;
+	text-align:left;
+	color:red;
+	margin-bottom:8px;
+}
+
+.content_table {
+	width:95%;
+	font-size:14px;
+	line-height:1.5;
+	text-align:center;
+	color:#000;
+}
+.content_table tr {
+	/*border:1px solid #6C0;*/
+	/*border-bottom:none;*/
+	border: none;
+}
+.content_table td {
+	border-top:none;
+	border-left:1px solid #6C0;
+	border-right:1px solid #6C0;
+	border-bottom:1px solid #6C0;
+}
+.table_title .info_area {
+	font-weight:bold;
+}
+
+.content_table .content_table_title{
+	font-weight:bold;
+	text-align:center;
+	border-top:1px solid #6C0;
+}
+.content_table .warning{
+	color:#F00;
+	}
+.content_table .new_added{
+	color:#3C0;
+	}
+.content_table .long_content {
+	text-align:left;
+	padding-left:5px;
+}
+.content_table .long_content span{
+	padding-left:5px;
+}
+.content_table .long_content .no_blank{
+	padding-left:0px;
+}
+.content_table .long_content .hide{
+	display:none;
+}
+.long_content, [align=right] {
+	*margin-right: 5px;
+}
+.content_table .editable {
+}
+.content_table .editable_focus {
+	background-color:#CBF1C9;
+}
+.content_table .add_area {
+	text-align:left;
+	padding:5px;
+}
+.content_table .groupmate {
+	/*border-bottom:none;*/
+	border-top:1px dashed #6C0;
+	border-bottom:1px dashed #6C0;
+}
+.content_table .editable_on_edit {
+	cursor:pointer;
+	background-color:#AFF1C9;
+	/*border:1px dotted #06F;*/
+	border: none;
+}
+.content_table .editable_partly_on_edit {
+	cursor:pointer;
+	background-color:#AFF1C9;
+	/*border:1px dotted #06F;*/
+	border: none;
+}
+.none_border {
+	border:none;
+}
+.ajax_form
+{
+	border:none;	
+}
+.input_type {
+	width:20%;
+	border:1px solid #6ABEFD;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_focus {
+	width:20%;
+	border:1px solid #00F;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_small {
+	width:10%;
+	border:1px solid #6ABEFD;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_small_focus {
+	width:10%;
+	border:1px solid #00F;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_full {
+	width:85%;
+	border:1px solid #6ABEFD;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.input_type_full_focus {
+	width:85%;
+	border:1px solid #00F;
+	height:18px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.select_type {
+	width:24%;
+	border:1px solid #6ABEFD;
+	height:22px;
+	line-height:18px;
+	margin-left:5px;
+	padding-left:2px;
+}
+.edit_table li {
+	border-bottom:1px dotted #999;
+}
+.edit_button {
+	background:url(./images/yizhuguanli_edit_button.png) no-repeat;
+	border:none;
+	height:25px;
+	line-height:23px;
+	width:12%;
+	text-align:center;
+	color:#fff;
+	cursor:pointer;
+	font-weight:bold;
+	margin:5px;
+}
+.add_button {
+	background:url(./images/yizhuguanli_add_button.png) no-repeat;
+	border:none;
+	height:25px;
+	line-height:23px;
+	width:16%;
+	text-align:center;
+	color:#fff;
+	cursor:pointer;
+	font-weight:bold;
+}
+.editble_partly {
+	cursor:pointer;
+}
+.danwei{
+	font-size:12px;
+}
+.short_content{
+	text-align:center;
+	vertical-align:top;
+	padding:2px;
+}
+.long_content{
+	padding:2px;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	padding:0px 5px 0px 5px;
+	word-wrap:break-word ;
+	/*word-break: break-all;*/
+}
+
+.edit_menu{
+	width:60%;
+	display:none;
+	position:relative;
+}
+.edit_menu .toolbar{
+	width:160px;
+	filter:alpha(Opacity=90);
+	-moz-opacity:0.9;
+	opacity: 0.9;
+	background:#27A3F9;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius:5px;
+}
+.edit_menu .highlight_area{
+	height:40px;
+	width:100%;
+	border:2px solid blue;
+	cursor:pointer;
+}

@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:arc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_activity_webview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+            <WebView
+                android:id="@+id/dlgwebview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                 />
+
+</LinearLayout>

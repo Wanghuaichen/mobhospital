@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_tip_note_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editview"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:background="@color/white"
+            android:hint="请输入文字便签"
+            android:visibility="gone" >
+        </EditText>
+
+        <com.tiantanhehe.yidongchafang.views.views.DrawView
+            android:id="@+id/drawview"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:background="@color/white" >
+        </com.tiantanhehe.yidongchafang.views.views.DrawView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tip_note_cmd"
+        android:layout_width="500dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/note_bg"
+        android:layout_marginBottom="3dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_tip_note_cmd"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/button_tip_note_color"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/note_color_selector"
+                android:onClick="pickColor"
+                android:text="画笔颜色" 
+                android:visibility="gone"
+                >
+            </ImageButton>
+            
+                        <com.tiantanhehe.yidongchafang.views.views.ColorCommandView
+                android:id="@+id/view_tip_note_color"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="12dp"
+                android:onClick="pickColor"
+                android:text="画笔颜色" >
+            </com.tiantanhehe.yidongchafang.views.views.ColorCommandView>
+
+            <ImageButton
+                android:id="@+id/button_tip_note_size"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/note_size_selector"
+                android:onClick="selectPen"
+                android:text="画笔大小" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/button_tip_note_eraser"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/note_eraser_selector"
+                android:onClick="selectEraser"
+                android:text="橡皮擦" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/button_tip_note_save"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/note_save_selector"
+                android:onClick="saveTipNote"
+                android:text="保存" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/button_tip_note_clear"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/note_clean_selector"
+                android:onClick="clearTipNote"
+                android:text="清空" >
+            </ImageButton>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/button_tip_note_cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/note_close_selector"
+            android:onClick="cancelTipNote"
+            android:text="取消" >
+        </ImageButton>
+    </RelativeLayout>
+
+</FrameLayout>

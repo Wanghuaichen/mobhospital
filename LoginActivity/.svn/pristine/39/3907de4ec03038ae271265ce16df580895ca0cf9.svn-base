@@ -1,0 +1,23 @@
+/*
+**区块模板css,主要用于每日病程的导入导出
+**2014-11-15 By Tian Ran
+*/
+
+/**********************************模板导入到病程****************************/
+
+/**********************************病程导出为模板****************************/
+.export_block_template_button {
+	background:url("./images/button_edit_menu.png") no-repeat;
+	width:76px;
+	height:30px;
+	/*line-height: 20px;*/
+	text-align:center;
+	cursor:pointer;
+	border:none;
+	color:#fff;
+}
+
+.export_block_template_button:hover {
+	background:url("./images/button_edit_menu_hover.png") no-repeat;
+	color:#fff;
+}

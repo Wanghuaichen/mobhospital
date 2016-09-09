@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="tizheng_value">
+        <item>体温</item>
+        <item>脉搏</item>
+        <item>呼吸</item>
+        <item>血压</item>
+        <!-- <item>操作</item> -->
+        <item>大便次数</item>
+        <item>小便次数</item>
+        <!-- <item>手术</item> -->
+        <item>身高</item>
+        <item>体重</item>
+        <item>出量</item>
+        <item>入量</item>
+        <item>过敏史</item>
+        <item>血糖</item>
+        <item>血氧</item>
+    </string-array>
+    <string-array name="tizheng_tiwen">
+        <item>腋温</item>
+        <!--
+        <item>口温</item>
+        <item>直肠</item>
+        <item>复查</item>
+        -->
+        <item>物理降温</item>
+    </string-array>
+    <string-array name="tizheng_shoushu">
+        <item>术后天数</item>
+        <item>手术日期</item>
+    </string-array>
+    <string-array name="tizheng_maibo">
+        <item>脉搏</item>
+        <!-- <item>短绌脉</item> -->
+        <item>心率</item>
+    </string-array>
+    <string-array name="tizheng_huxi">
+        <item>呼吸</item>
+        <!--
+      <item>自主呼吸</item>
+        <item>使用呼吸机</item>
+        -->
+    </string-array>
+    <string-array name="tizheng_xueya">
+        <item>收缩压/舒张压</item>
+        <!-- <item>单收缩压</item> -->
+        <!-- <item>单舒张压</item> -->
+    </string-array>
+    <string-array name="tizheng_xuetang">
+        <item>血糖</item>
+    </string-array>
+    <string-array name="tizheng_guominshi">
+        <item>过敏史</item>
+    </string-array>
+    <string-array name="tizheng_xueyang">
+        <item>常规</item>
+    </string-array>
+    <string-array name="tizheng_caozuo">
+        <item>外出</item>
+        <item>拒测</item>
+        <item>请假</item>
+    </string-array>
+    <string-array name="tizheng_chuliang">
+
+        <!--
+        <item>尿量</item>
+        <item>大便量</item>
+        -->
+        <item>出量</item>
+        <item>呕吐</item>
+    </string-array>
+    <string-array name="tizheng_yinliuliang">
+        <item>盆腔引流</item>
+        <item>腹腔引流</item>
+        <item>胃肠减压</item>
+        <item>胸腔引流</item>
+        <item>胸腔闭式引流</item>
+        <item>硬膜下引流</item>
+        <item>硬膜外引流</item>
+        <item>脑室引流</item>
+        <item>持续腰池引流</item>
+        <item>宫腔引流</item>
+        <item>T型管引流</item>
+        <item>颈部创腔引流</item>
+        <item>肛管引流</item>
+        <item>创腔引流</item>
+        <item>鼻胆管引流</item>
+        <item>温氏孔引流</item>
+        <item>胃空肠造瘘管引流</item>
+        <item>肝创面引流</item>
+        <item>肛管引流</item>
+    </string-array>
+    <string-array name="tizheng_ruliang">
+        <item>入量</item>
+        <item>饮水</item>
+        <item>饮料</item>
+        <item>哺乳</item>
+        <!--
+        <item>输液</item>
+        <item>口服</item>
+        -->
+    </string-array>
+    <string-array name="tizheng_dabiancishu">
+        <item>大便次数</item>
+        <!--
+      	<item>自行排便</item>
+        <item>灌肠后排便</item>
+        <item>大便失禁</item>
+        <item>人工肛门</item>
+        -->
+    </string-array>
+    <string-array name="tizheng_xiaobiancishu">
+        <item>小便次数</item>
+    </string-array>
+    <string-array name="tizheng_shengao">
+        <item>常规</item>
+        <item>平车</item>
+        <item>卧床</item>
+        <item>据测</item>
+        <item>免测</item>
+        <item>轮椅</item>
+        <item>外出</item>
+    </string-array>
+    <string-array name="tizheng_tizhong">
+        <item>常规</item>
+        <item>平车</item>
+        <item>卧床</item>
+    </string-array>
+    <string-array name="tizheng_guominyaowu">
+        <item>阳性</item>
+    </string-array>
+    <string-array name="tizheng_yishi">
+        <item>清醒</item>
+        <item>模糊</item>
+        <item>谵妄</item>
+        <item>嗜睡</item>
+        <item>昏睡</item>
+        <item>潜昏迷</item>
+        <item>中昏迷</item>
+        <item>深昏迷</item>
+    </string-array>
+    <string-array name="tizheng_tongkongdaxiao">
+        <item>常规</item>
+    </string-array>
+    <string-array name="tizheng_xinzangqiboqi">
+        <item>是否使用</item>
+        <item>次数</item>
+    </string-array>
+    <string-array name="tizheng_shuoming">
+        <item>体征未测原因</item>
+        <item>特殊情况说明</item>
+        <item>时间说明</item>
+        <item>时间</item>
+        <item>疼痛强度</item>
+    </string-array>
+    <string-array name="tizheng_tiwen_danwei">
+        <item> ℃</item>
+    </string-array>
+    <string-array name="tizheng_maibo_danwei">
+        <item> 次/分钟</item>
+    </string-array>
+    <string-array name="tizheng_huxi_danwei">
+        <item> 次/分钟</item>
+    </string-array>
+    <string-array name="tizheng_xueya_danwei">
+        <item> mmHg</item>
+    </string-array>
+    <string-array name="tizheng_caozuo_danwei">
+        <item></item>
+    </string-array>
+    <string-array name="tizheng_xueyang_danwei">
+        <item>%</item>
+    </string-array>
+    <string-array name="tizheng_chuliang_danwei">
+        <item>ml</item>
+    </string-array>
+    <string-array name="tizheng_yinliuliang_danwei">
+        <item>ml</item>
+    </string-array>
+    <string-array name="tizheng_shoushu_danwei">
+        <item></item>
+    </string-array>
+    <string-array name="tizheng_ruliang_danwei">
+        <item>ml</item>
+    </string-array>
+    <string-array name="tizheng_dabiancishu_danwei">
+        <item>次</item>
+    </string-array>
+    <string-array name="tizheng_xiaobiancishu_danwei">
+        <item>次</item>
+    </string-array>
+    <string-array name="tizheng_shengao_danwei">
+        <item>cm</item>
+    </string-array>
+    <string-array name="tizheng_tizhong_danwei">
+        <item>kg</item>
+    </string-array>
+    <string-array name="tizheng_guominyaowu_danwei">
+        <item></item>
+    </string-array>
+    <string-array name="tizheng_xuetang_danwei">
+        <item></item>
+    </string-array>
+    <string-array name="tizheng_guominshi_danwei">
+        <item></item>
+    </string-array>
+    <string-array name="tizheng_yishi_danwei">
+        <item></item>
+    </string-array>
+    <string-array name="tizheng_tongkongdaxiao_danwei">
+        <item>mm</item>
+    </string-array>
+    <string-array name="tizheng_xinzangqiboqi_danwei">
+        <item></item>
+    </string-array>
+    <string-array name="tizheng_shuoming_danwei">
+        <item></item>
+    </string-array>
+    <string-array name="hulijilu_yishi">
+        <item></item>
+        <item>清醒</item>
+        <item>嗜睡</item>
+        <item>意识模糊</item>
+        <item>昏睡</item>
+        <item>浅昏迷</item>
+        <item>深昏迷</item>
+        <item>谵妄</item>
+        <item>麻醉未醒</item>
+    </string-array>
+    <!--
+    <string-array name="hulijilu_yishi">
+    	<item> </item>
+        <item>Q.清醒</item>
+        <item>S.嗜睡</item>
+        <item>Y.意识模糊</item>
+        <item>H.昏睡</item>
+        <item>++.浅昏迷</item>
+        <item>+++.深昏迷</item>
+        <item>Z.谵妄</item>
+        <item>M.麻醉未醒</item>
+    </string-array>
+    -->
+    <string-array name="hulijilu_pifuqingkuang">
+        <item></item>
+        <item>A.完好</item>
+        <item>B.压疮</item>
+        <item>C.出血点</item>
+        <item>D.破损</item>
+        <item>E.水肿</item>
+    </string-array>
+    <string-array name="hulijilu_guluhuli">
+        <item></item>
+        <item>1.深静脉置管</item>
+        <item>2.浅静脉置管</item>
+        <item>3.留置尿管</item>
+        <item>4.留置胃管</item>
+        <item>5.胸腔闭式引流管</item>
+        <item>6.其它</item>
+    </string-array>
+    <string-array name="hulijilu_jiankangjiaoyu">
+        <item></item>
+        <item>√</item>
+        <item>入院</item>
+        <item>术前</item>
+        <item>术后</item>
+        <item>饮食</item>
+        <item>运动</item>
+        <item>药物指导</item>
+        <item>出院</item>
+        <item>疾病</item>
+    </string-array>
+    <string-array name="hulijilu_bingqingwuyichang">
+        <item></item>
+        <item>有</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="hulijilu_huanzheweizaibingfang">
+        <item></item>
+        <item>√</item>
+    </string-array>
+    <string-array name="hulijilu_jichuhuli">
+        <item></item>
+        <item>1.翻身拍背</item>
+        <item>2.口腔护理</item>
+        <item>3.皮肤护理</item>
+        <item>4.会阴护理</item>
+        <item>5.膀胱冲洗</item>
+        <item>6.灌肠</item>
+        <item>7.床上洗头</item>
+        <item>8.温水擦浴</item>
+        <item>9.吸痰</item>
+        <item>10.雾化</item>
+        <item>11.指趾甲护理</item>
+        <item>12.足部清洁</item>
+        <item>13.面部清洁和梳头</item>
+        <item>14.失禁护理</item>
+        <item>13.其它</item>
+    </string-array>
+    <string-array name="hulijilu_tongkongduiguangfanying">
+        <item></item>
+        <item>+.灵敏</item>
+        <item>-.迟钝</item>
+        <item>O.消失</item>
+    </string-array>
+    <string-array name="hulijilu_tongkongduiguangfanying2">
+        <item></item>
+        <item>灵敏</item>
+        <item>迟钝</item>
+        <item>消失</item>
+    </string-array>
+    <string-array name="hulijilu_fanshen">
+        <item></item>
+        <item>左侧</item>
+        <item>右侧</item>
+        <item>平卧</item>
+    </string-array>
+    <string-array name="hulijilu_type">
+        <item>全部</item>
+        <item>特殊护理记录</item>
+        <item>微量血糖监测</item>
+        <item>医院巡视卡</item>
+    </string-array>
+    <string-array name="hulijilu_type_add">
+        <item>特殊护理记录</item>
+        <item>微量血糖监测</item>
+        <item>医院巡视卡</item>
+    </string-array>
+    <string-array name="guanluhuli_value_type">
+        <item></item>
+        <item>1.深静脉置管</item>
+        <item>2.胃管</item>
+        <item>3.导尿管</item>
+        <item>4.头部引流管</item>
+        <item>5.胸腔引流管</item>
+        <item>6.T管</item>
+        <item>7.气管插管</item>
+        <item>8.气管切开</item>
+        <item>9.膀胱造瘘管</item>
+        <item>10.伤口引流</item>
+    </string-array>
+    <string-array name="guanluhuli_value">
+        <item></item>
+        <item>√</item>
+        <item>√/√</item>
+    </string-array>
+    <string-array name="main_patient_zhuangtai_xuanze">
+        <item>住院中</item>
+        <item>所有</item>
+        <item>已出院</item>
+        <item>24小时内出院</item>
+        <item>死亡</item>
+        <item>24小时内死亡</item>
+    </string-array>
+    <string-array name="jianyanjiancha_spinner">
+        <item>任意</item>
+        <item>检验科</item>
+        <item>CT室</item>
+        <item>超声科</item>
+        <item>放射科</item>
+    </string-array>
+    <string-array name="jianyan_spinner">
+        <item>任意</item>
+        <item>检验科</item>
+    </string-array>
+    <string-array name="jiancha_spinner">
+        <item>任意</item>
+        <item>CT室</item>
+        <item>超声科</item>
+        <item>放射科</item>
+    </string-array>
+    <string-array name="jianchazhuangtai_spinner">
+        <item> </item>
+        <item>检验中</item>
+        <item>检查完毕</item>
+    </string-array>
+    <string-array name="jianyanzhuangtai_spinner">
+        <item>检验中</item>
+        <item>检验完毕</item>
+    </string-array>
+    <!-- ZhuyuanOverviewActivity中需要的数组 -->
+    <string-array name="kangfu_zhiliao">
+        <item>康复一病区</item>
+        <item>康复二病区</item>
+        <item>康复三病区</item>
+    </string-array>
+    <string-array name="huanzhe_zhuangtai">
+        <item>住院中</item>
+        <item>已出院</item>
+    </string-array>
+    <string-array name="huanzhe_xuanze">
+        <item>所有患者</item>
+        <item>科室患者</item>
+        <item>我的患者</item>
+    </string-array>
+    <string-array name="huanzhe_bingqing_zhuangtai">
+        <item></item>
+        <item>普通</item>
+        <item>病重</item>
+        <item>病危</item>
+    </string-array>
+    <string-array name="bingchengjilu_type">
+        <item></item>
+        <item>首次病程记录</item>
+        <item>日常病程记录</item>
+        <item>主治医师查房记录 </item>
+        <item>主任医师查房记录 </item>
+        <item>副主任医师查房记录 </item>
+    </string-array>
+</resources>
+

@@ -1,0 +1,64 @@
+/**************************************************
+*  Created:  2013-01-20
+*  Info:信封打印CSS代码
+*  @Tiantanhehe (C)2011-3011 Tiantanhehe Inc.
+*  @Author DongJie <dj7229@126.com>
+*
+***************************************************/
+body {
+	margin:0px;
+	padding:0px;
+	font: 16px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p, form, input, ul, li{
+	margin:0;
+	padding:0;
+	border:none;
+}
+ul li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+}
+a img {
+	border:none;
+}
+table {
+	border-collapse:collapse;
+	empty-cells:show;
+}
+.content_table {
+	width:100%;
+	font-size:20px;
+	line-height:1.8;
+	text-align:left;
+	color:#000;
+}
+.content_table tr {
+	border:1px solid #000;
+}
+.content_table td {
+	border:1px solid #000;
+	padding-left:5px;
+}
+#printer_preview{
+	font-size:18px;
+	width:100%;
+	line-height:1.5;
+	font-weight:bold;
+	text-align:center;
+	color:#fff;
+	background:#91c11a;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+#printer_preview:hover{
+	background-color:#DFF1CD;
+}
+.dizhi{
+	line-height:1.2;
+}

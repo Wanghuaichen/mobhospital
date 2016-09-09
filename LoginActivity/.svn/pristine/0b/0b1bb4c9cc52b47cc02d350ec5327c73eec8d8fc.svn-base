@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_id">56d7fe00</string>
+    <string name="app_name">移动查房</string>
+    <string name="serverurl">app/updateYidongchafang.xml</string>
+    <string name="tuichu">退出登录</string>
+    <string name="left_menu_icon">左侧菜单图标</string>
+    <string name="user_touxiang">用户头像</string>
+    <string name="hushiID">医生ID：</string>
+    <string name="hushixingming">医生姓名：</string>
+    <string name="suoshukeshi">所属科室：</string>
+    <string name="zhiwu">所属职务：</string>
+    <string name="dangqian_banben">当前版本：</string>
+    <string name="shebeihao">设备号：</string>
+    <string name="xingming">姓  名  ：</string>
+    <string name="xingbie">性  别  ：</string>
+    <string name="nianling">年  龄  ：</string>
+    <string name="leibie">类  别  ：</string>
+    <string name="zhuyuanhao">住院号：</string>
+    <string name="daipeiye">待配液</string>
+    <string name="yipeiye">已配液</string>
+    <string name="yijiaodui">已校对</string>
+    <string name="weihedui">未核对</string>
+    <string name="peiye_but">配液</string>
+    <string name="jiaodui_but">校对</string>
+    <string name="chexiao_but">撤销</string>
+    <string name="quxiao_but">取消</string>
+    <string name="hulue_but">忽略</string>
+    <string name="guanbi_but">关闭</string>
+    <string name="daikai_but">查看</string>
+    <string name="zhenduan">诊断：</string>
+    <string name="zhusu">主诉：</string>
+    <string name="zhuzhenyishi">主治医师：</string>
+    <string name="chuanghao">床号：</string>
+    <string name="keshimingcheng">科室名称：</string>
+    <string name="yichangqingkuang">异常情况：</string>
+    <string name="jianchamingcheng">检查名称：</string>
+    <string name="jianyanbianhao">检验编号：</string>
+    <string name="songjiankeshi">送检科室：</string>
+    <string name="songjianyishi">送检医师：</string>
+    <string name="shenqingshijian">申请时间：</string>
+    <string name="jianchashijian">检查时间：</string>
+    <string name="songjianbiaoben">送检标本：</string>
+    <string name="jianyanmingcheng">名称</string>
+    <string name="jianyanjiancheng">简称</string>
+    <string name="jianchajieguo">结果</string>
+    <string name="jianchazhuangtai">状态</string>
+    <string name="jianchadanwei">单位</string>
+    <string name="jianchacankaozhi">参考值</string>
+    <string name="jianyanshijian">检验时间：</string>
+    <string name="jianyanzhe">检验者：</string>
+    <string name="jianyanheduizhe">核对者：</string>
+    <string name="jianyanneirongtixing">    *此份检查报告只对此份标本负责，在核对者签名后有效</string>
+    <string name="shujutongbu">数据同步</string>
+    <string name="yizhutixingtitle">医嘱提醒</string>
+    <string name="yinxiaoshezhi">音效设置:</string>
+    <string name="chafangtongbu">查房演示:</string>
+    <string name="xinyizhutixingtitle">新医嘱提醒</string>
+    <string name="tixinginfo">您有新医嘱需要执行</string>
+    <string name="zhengzaijiazai">数据加载中</string>
+    <string name="sousuotishi">输入您要搜索的内容</string>
+    <string name="sousuobut">搜索</string>
+    <string name="ruyuanjilu">入院记录</string>
+    <string name="chuyuanjilu">出院记录</string>
+    <string name="jiumima">旧密码:</string>
+    <string name="shuru_jiumima">请输入旧密码</string>
+    <string name="xinmima">新密码:</string>
+    <string name="shuru_xinmima">请输入新密码</string>
+    <string name="zaicishuru_xinmima">请再次输入新密码</string>
+    <string name="chongzhimima">重置密码</string>
+    <string name="shujuqingqiuzhong">数据请求中</string>
+    <string name="biaoti">标题</string>
+    <string name="fou">否</string>
+    <string name="shi">是</string>
+    <string name="bar_peiyehedui">配液核对:</string>
+    <string name="qupeiye">去配液</string>
+    <string name="bar_yizhuzhixing">医嘱执行:</string>
+    <string name="quzhixing">去执行</string>
+    <string name="quwancheng">去完成</string>
+    <string name="bar_biaobenjiancha">标本检查：</string>
+    <string name="bar_biaobenhedui">标本核对:</string>
+    <string name="quhedui">去核对</string>
+    <string name="bar_tizhengluru">体征录入：</string>
+    <string name="bar_huanzhexunshi">患者巡视：</string>
+    <string name="bar_jinri_xunshiluru">今日巡视信息录入：</string>
+    <string name="quluru">去录入</string>
+    <string name="jinri_huligongzuo">患者今日护理工作：</string>
+    <string name="biaoben_jianchamingcheng">检查名称:</string>
+    <string name="biaoben_keshi">检查科室:</string>
+    <string name="biaoben_songjianwu">送检物:</string>
+    <string name="yizhu_chakan_quanbu">全部</string>
+    <string name="yizhu_chakan_kaishizhixing">开始执行</string>
+    <string name="yizhu_chakan_tingzhizhixing">停止执行</string>
+    <string name="yizhu_chakan_qita">其他</string>
+    <string name="yizhu_zhixing_quanbu">全部</string>
+    <string name="yizhu_zhixing_daipeiye">待配液</string>
+    <string name="yizhu_zhixing_weizhixing">未执行</string>
+    <string name="yizhu_zhixing_kaishi">开始</string>
+    <string name="yizhu_zhixing_zanting">暂停</string>
+    <string name="yizhu_zhixing_wancheng">完成</string>
+    <string name="tizheng_lurushijian">录入时间:</string>
+    <string name="tizheng_lurushijian_tishi">填写查询日期</string>
+    <string name="tizheng_lurushijiandian_tishi">时间</string>
+    <string name="hulijilu_shaixuan_leibie">查看类别：</string>
+    <string name="tizheng_lishi_but">历史</string>
+    <string name="tizheng_sancedan_but">三测单</string>
+    <string name="tizheng_text_time">日期</string>
+    <string name="tizheng_text_leibie">类别</string>
+    <string name="tizheng_text_fangshi">方式</string>
+    <string name="tizheng_text_jianchazhi">检查值</string>
+    <string name="tizheng_text_guanli">管理</string>
+    <string name="tizheng_text_xiegang">/</string>
+    <string name="jiazaiquanbu">加载全部</string>
+    <string name="tizheng_lishi_zhibiao_tiwen">体温</string>
+    <string name="tizheng_lishi_zhibiao_maibo">脉搏</string>
+    <string name="tizheng_lishi_zhibiao_xueya">血压</string>
+    <string name="tizheng_lishi_zhibiao_qita">其他</string>
+    <string name="tizheng_lishi_qianyitian">前一天</string>
+    <string name="tizheng_lishi_dangqianriqi">当前</string>
+    <string name="tizheng_lishi_houyitian">后一天</string>
+    <string name="tizheng_lishi_sancedan">三测单</string>
+    <string name="huanzhexunshi">患者巡视</string>
+    <string name="add_tizheng">添加体征</string>
+    <string name="tizheng_jisuanqi">计算器</string>
+    <string name="tizheng_miaobiao">秒表</string>
+    <string name="tizheng_miaobiao_title">体征秒表</string>
+    <string name="miaobiao_kaishi">开始</string>
+    <string name="miaobiao_jieshu">结束</string>
+    <string name="miaobiao_chongzhi">重置</string>
+    <string name="miaobiao_guanbi">关闭</string>
+    <string name="miaobiao_morenzhi">00</string>
+    <string name="miaobiao_morenzhi_fenge">:</string>
+    <string name="jisuanqi_morenzhi">请输入值</string>
+    <string name="jisuanqi_fuwei">复位</string>
+    <string name="jisuanqi_1">1</string>
+    <string name="jisuanqi_2">2</string>
+    <string name="jisuanqi_3">3</string>
+    <string name="jisuanqi_cheng">*</string>
+    <string name="jisuanqi_0">0</string>
+    <string name="jisuanqi_dian">.</string>
+    <string name="jisuanqi_deng">=</string>
+    <string name="jisuanqi_chu">/</string>
+    <string name="jisuanqi_4">4</string>
+    <string name="jisuanqi_5">5</string>
+    <string name="jisuanqi_6">6</string>
+    <string name="jisuanqi_jian">-</string>
+    <string name="jisuanqi_7">7</string>
+    <string name="jisuanqi_8">8</string>
+    <string name="jisuanqi_9">9</string>
+    <string name="jisuanqi_jia">+</string>
+    <string name="jisuanqi_shanchu">删除</string>
+    <string name="jisuanqi_guanbi">关闭</string>
+    <string name="hulijilu_quanbu">全部</string>
+    <string name="hulijilu_yiban">一般</string>
+    <string name="hulijilu_teshu">特殊</string>
+    <string name="hulijilu_add">添加</string>
+    <string name="chakan">查看</string>
+    <string name="zhonghengxian">-</string>
+    <string name="kaishishijian">输入开始时间</string>
+    <string name="jieshushijian">输入结束时间</string>
+    <string name="hulijilu_lurushijian">记录时间：</string>
+    <string name="hulijilu_yishi">意识：</string>
+    <string name="hulijilu_tiwen">体温(℃)：</string>
+    <string name="hulijilu_maibo">脉搏(次/分)：</string>
+    <string name="hulijilu_huxi">呼吸(次/分)：</string>
+    <string name="hulijilu_xueya">血压(mmHg)：</string>
+    <string name="hulijilu_xueyang">血氧(%)：</string>
+    <string name="hulijilu_xiyang">吸氧(L/分)：</string>
+    <string name="hulijilu_pifuqingkuang">皮肤情况：</string>
+    <string name="hulijilu_guanluhuli">管路护理：</string>
+    <string name="hulijilu_jiankangjiaoyu">健康教育：</string>
+    <string name="hulijilu_jichuhuli">基础护理：</string>
+    <string name="hulijilu_bingqingwuyichang">病情无异常：</string>
+    <string name="hulijilu_bingqingbianhua">病情变化：</string>
+    <string name="hulijilu_huanzheweizaibingfang">患者未在病房：</string>
+    <string name="hulijilu_bingqingguanchayucuoshi">病情观察与措施：</string>
+    <string name="hulijilu_bingqingbianhuachuli">病情变化及处理：</string>
+    <string name="hulijilu_beizhu">备注：</string>
+    <string name="hulijilu_hulijilu">护理记录：</string>
+    <string name="hulijilu_luru_hushi">录入护士：</string>
+    <string name="hulijilu_hedui_hushi">核对护士：</string>
+    <string name="hulijilu_tongkong_zuo">瞳孔-左(mm)：</string>
+    <string name="hulijilu_tongkong_you">瞳孔-右(mm)：</string>
+    <string name="hulijilu_duiguangfanyin_zuo">对光反应-左：</string>
+    <string name="hulijilu_duiguangfanyin_you">对光反应-右：</string>
+    <string name="hulijilu_ruliang_mingcheng">入量-名称：</string>
+    <string name="hulijilu_ruliang_value">入量(ml)：</string>
+    <string name="hulijilu_chuliang_mingcheng">出量-名称：</string>
+    <string name="hulijilu_chuliang_value">出量(ml)：</string>
+    <string name="hulijilu_chuliang_yansexingzhuang">出量-颜色性状：</string>
+    <string name="hulijilu_xinlv">心率(次/分)：</string>
+    <string name="hulijilu_yaowu_mingcheng">药物名称：</string>
+    <string name="hulijilu_yaowuliang">药物量：</string>
+    <string name="jianyan_mingcheng">名称</string>
+    <string name="jianyan_shuzhi">数值</string>
+    <string name="jianyan_tishi">提示</string>
+    <string name="jianyan_cankaozhi">参考值</string>
+    <string name="jianyan_jieguo">检查结果</string>
+    <string name="hulijilu_fanshen">翻身：</string>
+    <string name="hulijilu_kongbai">空白：</string>
+    <string name="hulijilu_jiancejieguo">监测结果：</string>
+    <string name="hulijilu_xitan">吸痰：</string>
+    <string name="hulijilu_wuhua">雾化：</string>
+    <string name="hulijilu_spo2">Spo2(%)：</string>
+    <string name="teshu_header">特殊患者</string>
+    <string name="teshu_fashao_chuanghao">床号</string>
+    <string name="teshu_fashao_name">姓名</string>
+    <string name="teshu_fashao_zuijinTime">最近发热时间</string>
+    <string name="teshu_fashao_Tiwen">体温</string>
+    <string name="teshu_fashao_maxTiwen">72H内最高体温</string>
+    <string name="teshu_tengtong_chuanghao">床号</string>
+    <string name="teshu_tengtong_name">姓名</string>
+    <string name="teshu_tengtong_celiangTime">测量时间</string>
+    <string name="teshu_tengtong_jibie">疼痛级别</string>
+
+    <!-- LoginActivity中字符串提取 -->
+    <string name="xitong_banbenhao">当前系统版本号：</string>
+    <string name="shuru_yonghuming">请输入您的登录用户名</string>
+    <string name="shuru_mima">请输入您的登录用密码</string>
+    <string name="saomiao_erweima_kuaijiedenglu">请扫描您的登陆二维码以快捷登陆系统。</string>
+    <string name="tuichu_chengxu">再按一次退出程序</string>
+    <string name="denglu">登录</string>
+    <string name="shuruzhanghao">用户名</string>
+    <string name="shurumima">密码</string>
+
+    <!-- MainActivity中字符串提取 -->
+    <string name="peiyaohedui">配药核对</string>
+    <string name="peiyaoheduiv415">配药核对v415</string>
+    <string name="newpeiyaohedui">新配药核对</string>
+    <string name="biaobenjiancha">标本检查</string>
+    <string name="yizhuzhixing">医嘱执行</string>
+    <string name="yizhuzhixingv415">医嘱执行v415</string>
+    <string name="xinyizhuzhixing">新医嘱执行</string>
+    <string name="tizhengluru">体征录入</string>
+    <string name="xintizhengluru">新体征录入</string>
+    <string name="huliwenshu">护理文书</string>
+    <string name="newhuliwenshu">新护理文书</string>
+    <string name="xunchashijian">巡查事件</string>
+    <string name="ruyuanpinggu">入院评估</string>
+    <string name="hulijilu">护理记录</string>
+    <string name="hulishijian">护理事件</string>
+    <string name="xinhulijilu">新护理记录</string>
+    <string name="xuetangjiance">血糖监测</string>
+    <string name="huanzhexinxi">患者信息</string>
+    <string name="zhuyuanjingfei">住院经费</string>
+    <string name="jixiaotongji">绩效统计</string>
+    <string name="buliangshijian">不良事件</string>
+    <string name="hulicaozuo">护理操作</string>
+    <string name="chakanyizhu">查看医嘱</string>
+    <string name="jianyanjiancha">检验检查</string>
+    <string name="teshuhuanze">特殊患者</string>
+    <string name="huanzebucunzai">该患者不存在</string>
+    <string name="wuxiao_erweima">无效二维码，请检查</string>
+    <string name="zantingzhixing">暂停执行</string>
+    <string name="zhixingwanbi">执行完毕</string>
+    <string name="biaobenhedui_saotaioma">请在标本核对中扫标本条码</string>
+    <string name="peihehedui_yizhuzhixing_saoma">请在配液核对和医嘱执行页面扫码医嘱瓶贴</string>
+    <string name="tiaomawuxiao_hedui">条码无效请核对</string>
+    <string name="zhuyuanzonglan">住院总览</string>
+    <string name="chakanhuanzhe">查看患者</string>
+    <string name="chafangoverview">查房概要</string>
+    <string name="zonghechafangshitu">综合查房视图</string>
+    <string name="tiwenjiludan">三测单</string>
+    <string name="shijianshitu">时间视图</string>
+    <string name="chafangyindao">查房引导</string>
+    <string name="zhenduanmenu">诊断</string>
+    <string name="binglijilu">病历记录</string>
+    <string name="binglibianji">病历编辑</string>
+    <string name="bingquganlan">病区概览</string>
+    <string name="chafanggensui">查房演示</string>
+    <string name="yingyongjicheng">应用集成</string>
+    <string name="jianchayingxiang">检查影像</string>
+    <string name="dianzibingli">电子病历</string>
+    <string name="baodaoxitong">报道系统</string>
+
+    <!-- TiantanActivity中字符串提取 -->
+    <string name="nv">女</string>
+    <string name="nan">男</string>
+    <string name="tejihuli">特级护理</string>
+    <string name="yijihuli">一级护理</string>
+    <string name="erjihuli">二级护理</string>
+    <string name="sanjihuli">三级护理</string>
+    <string name="xinyizhu">新医嘱</string>
+    <string name="dangqian_hulijibie">当前护理级别：</string>
+    <string name="shuye">输液</string>
+    <string name="you">有</string>
+    <string name="tiaodaipeiye">条待配液</string>
+    <string name="tiaodaizhixing">条待执行</string>
+    <string name="tiaodaiwancheng">条待完成</string>
+    <string name="tiaodaihedui">条待核对</string>
+    <string name="yizhu_zhixingqingkuang">今日医嘱执行情况：</string>
+    <string name="tizheng">体征</string>
+    <string name="zonghuanzhe">总患者:</string>
+    <string name="tejihuanzhe">特级患者:</string>
+    <string name="yijihuanzhe">一级患者:</string>
+    <string name="erjihuanzhe">二级患者:</string>
+    <string name="ren">人</string>
+    <string name="wangluobuhao_zaishi">网络不好，请稍后再试</string>
+    <string name="zhengzai_tongbushuju">正在同步数据...</string>
+    <string name="huanzhe_bucunzai">这个患者不存在</string>
+    <string name="keshi_qiehuanchenggong">当前科室切换成功。</string>
+    <string name="qiehuan_qingsaohou">正在切换科室，请稍后...</string>
+    <string name="wangluojiance">网络监测</string>
+    <string name="xiugaimima">修改密码</string>
+    <string name="quanbu">住院</string>
+    <string name="yidazu">一大组</string>
+    <string name="erdazu">二大组</string>
+    <string name="kangfuzhiliao">康复</string>
+
+    <!-- ServerCommunicationTask中提取字符串 -->
+    <string name="chaoshi_chongxincangshi">服务器请求超时，请稍后重新尝试。</string>
+    <string name="kaishijieya_yaqianshujudaxiao">开始解压数据,解压前数据大小: </string>
+
+    <!-- ServerCommunicationTask中提取字符串 -->
+    <string name="shezi">设置</string>
+
+    <!-- TiantanBrowserActivity中提取字符串 -->
+    <string name="queding">确定</string>
+    <string name="jiazai_qingsaohou">正在加载中，请稍后。。。</string>
+    <string name="qiehuanzhuangtai">当前不能切换登陆用户，请回到主界面后切换登陆用户状态。</string>
+
+    <!-- ZidongExitActivity中提取字符串 -->
+    <string name="tuichutishi">退出提示</string>
+    <string name="saohouzaishi">您的帐号已经在别处登录，请稍后再试</string>
+
+    <!-- AppUpdate中提取字符串 -->
+    <string name="banbenshengji">版本升级</string>
+    <string name="queren">确认</string>
+    <string name="xiazaigengxin">正在下载更新</string>
+    <string name="APP_gengxinshibai">APP文件更新失败</string>
+
+    <!-- BiaobenListActivity中提取字符串 -->
+    <string name="hedui">核对</string>
+    <string name="biaobencaiji">标本采集</string>
+    <string name="biaoben_yihedui">这个标本已核对</string>
+    <string name="bunengsaomiao">对不起,未核对条码不能在已校对界面扫描</string>
+    <string name="buzhichi_qiehuan">此界面不支持患者切换功能</string>
+    <string name="wuxiaotiaoma">无效的条码</string>
+
+    <!-- ShowFeiyongActivity中提取字符串 -->
+    <string name="jiazaishuju">正在努力加载数据...</string>
+    <string name="meiyoushuju">没有找到您要的数据</string>
+    <string name="shengyuyueu">剩余余额：</string>
+
+    <!-- AddHulijiluActivity中提取字符串 -->
+    <string name="qingzhengque_caozuo">请扫描正确的条码进行操作。</string>
+    <string name="baocuntishi">保存提示</string>
+    <string name="shifoubaocun">是否确认保存数据？</string>
+    <string name="baocun">保存</string>
+    <string name="tianjia_hulijilu">添加一般护理记录</string>
+    <string name="baocunshuju">正在保存数据...</string>
+    <string name="baocunchenggong">保存成功</string>
+    <string name="baocunshibai">保存失败</string>
+    <string name="duoxiangxuanze">多项选择</string>
+    <string name="qingshuru">请输入</string>
+
+    <!-- ShowHulijiluListActivity中提取字符串 -->
+    <string name="xuanzeleibie">请选择类别</string>
+    <string name="weixuanze_leibie">您未选择类别</string>
+    <string name="shifouqueren_baocun">是否确认保存修改的数据？</string>
+    <string name="tianjiatishi">添加提示</string>
+    <string name="quedingtianjia">确定要添加这条</string>
+
+    <!-- JianyanJianChaListActivity中提取字符串 -->
+    <string name="jianyanke">检验科</string>
+    <string name="qitakeshi">其他科室</string>
+    <string name="jianyan">检验</string>
+    <string name="jiancha">检查</string>
+    <string name="jianyanjilu">检验记录</string>
+    <string name="jianchajilu">检查记录</string>
+    <string name="jiancha_keshi">科别：</string>
+    <string name="jiancha_xingming">姓名：</string>
+    <string name="jiancha_xingbie">性别：</string>
+    <string name="jiancha_bingchuang">病床：</string>
+    <string name="jiancha_nianling">年龄：</string>
+    <string name="jiancha_yingxianghao">影像号：</string>
+    <string name="jiancha_xianpianhao">X线片号：</string>
+    <string name="jiancha_cthao">CT号：</string>
+    <string name="jiancha_chaoshenghao">超声号：</string>
+    <string name="jiancha_shebeileixing">设备类型：</string>
+    <string name="jiancha_shebeixinghao">设备型号：</string>
+    <string name="jiancha_jianchabuwei">检查部位：</string>
+    <string name="jiancha_jianchaxiangmu">检查项目：</string>
+    <string name="jiancha_jianchariqi">检查日期：</string>
+    <string name="jiancha_baogaoriqi">报告日期：</string>
+    <string name="jiancha_suojian">影像学所见：</string>
+    <string name="jiancha_tishi">影像学意见：</string>
+    <string name="jiancha_baogaoyishi">报告医师：</string>
+    <string name="jiancha_shenheyishi">审核医师：</string>
+    <string name="jiancha_shenqiyishi">申请医师：</string>
+    <string name="jiancha_jianchayishi">检查医师：</string>
+    <string name="jiancha_shuxieyishi">书写医师：</string>
+    <string name="jiancha_yijian_tishi">注：报告需医生签字，本报告仅供临川医学参考，不作为法律依据。</string>
+    <string name="jiancha_chaosheng_zhuyishixiang">注：超声检查准确性受诸多因素影响，如患者自身因素（肥胖、气体干扰、准备不充分、不能配合、病变位置特殊、疾病所处不同阶段等）、设备因素（仪器型号及性能不同，其图像质量和分辨率有差异）、检查者因素（超声结论依据国内外公认的影响特这，对超声影像的判读不同检查者之间可能存在差异）等，此报告是影像检查结果，请以病理诊断或临床最后诊断为准，与本次检查相关的医疗活动应充分了解上述因素。</string>
+	<string name="jiancha_ct_zhuyishixiang">注：本报告仅供临川医学参考，不作为法律依据。</string>
+	<string name="chaosheng_tuxiang">超声影像</string>
+	<string name="fangshe_tuxiang">放射影像</string>
+	<string name="ct_tuxiang">CT影像</string>
+	 
+    <!-- PatientInfoActivity中提取字符串 -->
+    <string name="weizhaodao_shuju">未找到相关数据</string>
+
+    <!-- ShowBingchengjiluShouciActivity中提取字符串 -->
+    <string name="shouci_bingchengjilu">首次病程记录</string>
+    <string name="bingchengjilu">病程记录</string>
+    <string name="binglitedian">病历特点：</string>
+    <string name="zhongyibianzhengyiju">中医辨证依据：</string>
+    <string name="xiyibianzhengyiju">西医辨证依据：</string>
+    <string name="zhongyijianbiezhenduan">中医鉴别诊断：</string>
+    <string name="zhenliaojihua">诊疗计划：</string>
+    <string name="jikecuoshi">即可措施：</string>
+    <string name="yishi">医师：</string>
+
+    <!-- ShowRuyuanjiluActivity中提取字符串 -->
+    <string name="xianbingshi">现病史：</string>
+    <string name="xianbingshi_neirong">主现病史主诉恢复的健康十分好的借口上来回发多少</string>
+    <string name="jiwangshi">既往史：</string>
+    <string name="gerenshi">个人史：</string>
+    <string name="yuejingshi">月经史：</string>
+    <string name="hunyushi">婚育史：</string>
+    <string name="jiazhushi">家族史：</string>
+    <string name="wangwenqiezhen">中医望、闻、切诊</string>
+    <string name="tigejiancha">体格检查</string>
+    <string name="zhuankejiancha">专科检查</string>
+    <string name="fuzhujiancha">辅助检查</string>
+
+    <!-- ShowAddTizhengInfoActivity中提取字符串 -->
+    <string name="chuli_zaibaocun">请先处理异常值再保存</string>
+    <string name="tiwenceliang">体温测量</string>
+    <string name="maiboceliang">脉搏测量</string>
+    <string name="huxiceliang">呼吸测量</string>
+    <string name="xueyaceliang">血压测量</string>
+    <string name="xueyangceliang">血氧测量</string>
+    <string name="chuliangceliang">出量测量</string>
+    <string name="ruliangceliang">入量测量</string>
+    <string name="dabiancishu">大便次数</string>
+    <string name="xiaobiancishu">小便次数</string>
+    <string name="shengaoceliang">身高测量</string>
+    <string name="tizhongceliang">体重测量</string>
+    <string name="guominyaowu">过敏药物</string>
+    <string name="tongkongdaxiao">瞳孔大小</string>
+    <string name="shuju_baocunchenggong">数据保存成功</string>
+    <string name="huanzhezaiwei">患者在位</string>
+    <string name="xiaotishi">小提示：左右滑动进行切换:)</string>
+    <string name="shanchutishi">删除提示</string>
+    <string name="shifou_shanchucihang">是否确认删除此行？</string>
+
+    <!-- ShowJisuanqiActivity中提取字符串 -->
+    <string name="bunengweichushu">0不能为除数</string>
+
+    <!-- ShowLishiTizhengInfoActivity中提取字符串 -->
+    <string name="zhibiao">指标</string>
+
+    <!-- ShowTiwendanActivity中提取字符串 -->
+    <string name="zuihouyizhou">已经是最后一周了</string>
+    <string name="diyizhou">已经是第一周了</string>
+
+    <!-- ShowHulitongjiActivity中提取字符串 -->
+    <string name="huli_jixiaotongji">护理绩效统计</string>
+
+    <!-- ShowAddXunchaActivity中提取字符串 -->
+    <string name="yuxiansaomiao_touka">请预先扫描患者床头卡!</string>
+
+    <!-- teshu系列布局文件字符串提取 -->
+    <string name="yichuang">1床</string>
+    <string name="zhangsan">张三</string>
+    <string name="fashao">发烧</string>
+    <string name="quanyuanhuanzhe">全院患者</string>
+    <string name="fashaohuanzhe">发烧患者</string>
+    <string name="tengtonghuanzhe">疼痛患者</string>
+
+    <!-- newyizhu中提取字符串 -->
+    <string name="changqi">长期</string>
+    <string name="linshi">临时</string>
+    <string name="yixiada">已下达</string>
+    <string name="koufu">口服</string>
+    <string name="huli">护理</string>
+    <string name="yizhu_zhixingtishi">医嘱执行提示</string>
+    <string name="weizhixingwanbi_shifouzidongjieshu">有未执行完毕的液体，是否自动结束上一组液体？</string>
+    <string name="weizhixingwanbi_bunengdakai">有未执行完毕的医嘱，不能开始其它医嘱</string>
+    <string name="weizhixingwanbi_shifoujieshu">有未执行完毕的液体，是否结束上一组液体？</string>
+    <string name="yizhu_piliangzhixing">医嘱批量执行提示</string>
+    <string name="shifou_wanchengxuanzhongyizhu">是否确认批量完成选中的医嘱？</string>
+    <string name="zhengzaizhixing_qingshaohou">正在批量执行医嘱，请稍后...</string>
+    <string name="main_bt_bingwei">病危</string>
+    <string name="main_bt_bingzhong">病重</string>
+    <string name="main_bt_yiban">一般</string>
+    <string name="main_bt_suoyou">所有</string>
+    <string name="main_bt_my">我的</string>
+    <string name="main_sousuo_hintcontent">关键字：床号、姓名、住院号</string>
+    <string name="main_bt_sousuo">搜索</string>
+    <string name="title_activity_action_bar">ActionBarActivity</string>
+    <string name="jianyanjiancha_top_shenqingshijian">申请时间</string>
+    <string name="jianyanjiancha_top_jianchashijian">检查时间</string>
+    <string name="jianyanjiancha_top_jianchakeshi">检查科室</string>
+    <string name="jianyanjiancha_top_jianchaname">检查名称</string>
+    <string name="jianyanjiancha_top_yichangqingkuang">异常情况</string>
+    <string name="jianyanjiancha_top_baogaoshijian">报告生成时间</string>
+    <string name="jianyan_list_top_jianyanzhuangtai">检验状态</string>
+    <string name="jiancha_list_top_jianchazhuangtai">检查状态</string>
+    <string name="bt_shaixuan">筛选</string>
+    <string name="jianyanjiancha_edt_hint">输入关键字</string>
+
+    <!-- ZhuyuanOverviewActivity中字符串提取 -->
+    <string name="jibenxinxi">基本信息</string>
+    <string name="zuijin_shenti_zhuangkuang">最新身体状况</string>
+    <string name="zuijin_huli_zhuangkuang">最新护理状况</string>
+    <string name="zuijin_bingcheng_jilu">最新病程记录</string>
+    <string name="xiangguan_zeren_yishi">相关责任医师</string>
+    <string name="huanzhe_guanli">患者管理</string>
+    <string name="zhuyuan_zonglan_nianling">年 龄:</string>
+    <string name="zhuyuan_zonglan_zhuyuan_hao">住 院 号:</string>
+    <string name="zhuyuan_zonglan_suozai_bingqu">所在病区:</string>
+    <string name="zhuyuan_zonglan_ruyuan_riqi">入院日期:</string>
+    <string name="zhuyuan_zonglan_xingbie">性 别:</string>
+    <string name="zhuyuan_zonglan_bingchanghao">病 床 号:</string>
+    <string name="zhuyuan_zonglan_zhuuan_zhuangtai">住院状态:</string>
+    <string name="zhuyuan_zonglan_tiwen">体温:</string>
+    <string name="zhuyuan_zonglan_shengao">身高:</string>
+    <string name="zhuyuan_zonglan_ruliang">入量:</string>
+    <string name="zhuyuan_zonglan_maibo">脉搏:</string>
+    <string name="zhuyuan_zonglan_xueya">血压:</string>
+    <string name="zhuyuan_zonglan_chuliang">出量:</string>
+    <string name="zhuyuan_zonglan_kezhuren">科主任:</string>
+    <string name="zhuyuan_zonglan_zhuzhi_yishi">主治医师:</string>
+    <string name="zhuyuan_zonglan_jinxiu_yishi">进修医师:</string>
+    <string name="zhuyuan_zonglan_yanjiushengshixi_yishi">研究生实习医师:</string>
+    <string name="zhuyuan_zonglan_zhuren_yishi">主(副)任医师:</string>
+    <string name="huyuan_zonglan_zhuyuan_yishi">住院医师:</string>
+    <string name="huyuan_zonglan_shixi_yishi"> 实习医师:</string>
+    <string name="zhuyaun_zonglan_kangfu_zhiliao">康复治疗:</string>
+
+    <!-- 护理记录列表界面 -->
+    <string name="hulijilu_list_subtitle_hulijibie"> 护理级别次数</string>
+    <string name="hulijilu_list_subtitle_duiyingriqi">护理级别对应日期</string>
+    <string name="hulijilu_list_subtitle_beizhu">备注</string>
+
+    <!-- 查房概要界面中提取字符串 -->
+    <string name="huxixitong">呼吸系统</string>
+    <string name="ganranxitong">感染</string>
+    <string name="xunhuanxitong">循环系统</string>
+    <string name="miniaoxitong">泌尿系统</string>
+    <string name="neifenmixitong">内分泌系统</string>
+    <string name="xueyexitong">血液系统</string>
+    <string name="shenjingxitong">神经系统</string>
+    <string name="xiaohuaxitong">消化系统</string>
+    <string name="mianyixitong">免疫系统</string>
+    <string name="title_activity_show_one_jiancha_report">ShowOneJianchaReport</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_show_one_jianyan_report">ShowOneJianyanReport</string>
+
+    <!-- 医嘱查看界面中提取字符串 -->
+    <string name="changqiyizzhu">长期医嘱</string>
+    <string name="linshiyizzhu">临时医嘱</string>
+    <string name="tingzhizhixing">停止执行</string>
+    <string name="kaishizhixing">开始执行</string>
+    <string name="suoyouyizhu">所有医嘱</string>
+    <string name="yizhuzhixingdan">医嘱执行单</string>
+    <string name="yizhu_tab_kaishi">起始</string>
+    <string name="yizhu_tab_shijian">年月日时分</string>
+    <string name="yizhu_tab_yishengqianming">医生\n签名</string>
+    <string name="yizhu_tab_hushiqianming">护士\n签名</string>
+    <string name="yizhu_tab_yizhucontent">医嘱内容</string>
+    <string name="yizhu_tab_tingzhi">停止</string>
+    <string name="yizhu_tab_xiadashijian">下达时间</string>
+    <string name="yizhu_tab_zhixingshijian">执行时间</string>
+    <string name="yizhu_tab_yishengqianming_linshi">医生签名</string>
+    <string name="yizhu_tab_hushiqianming_linshi">护士签名</string>
+    <string name="yizhu_fenye_but_shouye">首页</string>
+    <string name="yizhu_fenye_but_moye">末页</string>
+
+    <!-- 病程记录界面中提取字符串 -->
+    <string name="bingcheng_tab_shijian">记录日期</string>
+    <string name="bingcheng_tab_shijian_hint">输入关键字</string>
+    <string name="bingcheng_tab_leixing">病程类型</string>
+    <string name="bingcheng_tab_yishi">参与医师</string>
+    <string name="bingcheng_tab_zhuangtai">状态</string>
+    <string name="bingcheng_tab_shaixuan">筛选</string>
+
+    <!-- 护理记录界面中提取字符串 -->
+    <string name="hulijilu_tab_jibie">护理等级</string>
+    <string name="hulijilu_tab_riqi">对应日期</string>
+    <string name="hulijilu_tab_beizhu">备注</string>
+
+    <!-- 应用集成界面中提取字符串 -->
+    <string name="settings_username">用户名</string>
+    <string name="settings_password">密码</string>
+    <string name="settings_domain">域</string>
+    <string name="error_connection_failure">登陆失败</string>
+    <string name="dlg_title_verify_certificate">认证证书</string>
+    <string name="dlg_title_credentials">请输入凭证</string>
+    <string name="dlg_msg_connecting">连接中 ...</string>
+    <string name="menu_touch_pointer">鼠标</string>
+    <string name="menu_sys_keyboard">键盘</string>
+    <string name="menu_ext_keyboard">功能键</string>
+    <string name="menu_disconnect">断开</string>
+    <string name="info_capabilities_changed">屏幕设置已修改因为服务器不支持该配置</string>
+    <string name="dlg_msg_verify_certificate">无法验证远程电脑身份，是否需要继续连接？</string>
+    <string name="dlg_title_exit">确认退出?</string>
+    <string name="dlg_msg_exit">未保存的信息将不被保存?</string>
+    <string name="dlg_msg_xiaoyixiao">公共汽车上老太太怕坐过站逢站必问汽车到一站她一个劲的用雨伞捅司机“这是展览中心吗？”“不是，这是排骨！”</string>
+	
+    <!-- 小扁鹊界面中提取字符串 -->
+    <string name="type_jianyanjilu">检验记录</string>
+    <string name="type_jianchajilu">检查记录</string>
+    <string name="type_bingchengjilu">病程记录</string>
+    <string name="type_ruyuanjilu">入院记录</string>
+    
+    <!-- Button labels -->
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="jiancha_list_top_riqi">请选择申请时间</string>
+
+</resources>

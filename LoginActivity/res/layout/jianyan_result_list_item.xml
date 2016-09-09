@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/jianyanresult_item"
+    android:orientation="horizontal" >
+
+    <View
+        android:layout_width="0.5px"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/jianyan_mingcheng"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/jianyanmingcheng"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="0.5px"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/jianyan_jiancheng"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/jianyanjiancheng"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="0.5px"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/jianyan_jieguo"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/jianchajieguo"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="0.5px"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:visibility="visible" />
+
+   <TextView
+        android:id="@+id/jianyan_zhuangtai"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/jianchazhuangtai"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="0.5px"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:visibility="visible" /> 
+
+    <TextView
+        android:id="@+id/jianyan_danwei"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/jianchadanwei"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="0.5px"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/jianyan_cankaozhi"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/jianchacankaozhi"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="0.5px"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:visibility="visible" />
+
+</LinearLayout>
