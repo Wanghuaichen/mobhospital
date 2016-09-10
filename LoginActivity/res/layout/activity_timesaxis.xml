@@ -40,7 +40,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
             android:gravity="center"
             android:text="住院时间"
             android:textColor="#2185c6"
@@ -134,13 +134,14 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:background="#c0e4f6"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp" >
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1" >
+                    android:layout_weight="0.5" >
 
                     <TextView
                         android:id="@+id/txt_timesaxisfragment_livetime"
@@ -149,7 +150,7 @@
                         android:gravity="center_vertical"
                         android:text="住院时间"
                         android:textColor="#000000"
-                        android:textSize="22sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <ScrollView
@@ -197,12 +198,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="vertical" />
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp" />
 
                 <LinearLayout
+                    android:id="@+id/ll_maibo_item"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -213,7 +222,8 @@
                         android:id="@+id/gridview_blood"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:numColumns="auto_fit" />
+                        android:numColumns="auto_fit"
+                        android:visibility="gone" />
                 </LinearLayout>
 
                 <LinearLayout

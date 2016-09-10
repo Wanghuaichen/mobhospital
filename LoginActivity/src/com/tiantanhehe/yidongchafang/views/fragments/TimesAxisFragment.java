@@ -10,6 +10,9 @@ import org.json.JSONObject;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.Legend.LegendForm;
+import com.github.mikephil.charting.components.Legend.LegendPosition;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
@@ -30,27 +33,30 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 
 /**
- * @author Administrator 折线图如果不是从第一天开始画，先去获取timeList的每一项宽度*跳过的天数，就可以当做marginleft
+ * 思路:
+ * @author Administrator 
+ * 		       折线图如果不是从第一天开始画，先去获取timeList的每一项宽度*跳过的天数，就可以当做marginleft
  *         和 marginright,没有margin 可以用padding
  *
- *         PS:直线那里可以不需要那么麻烦，直接写一个横向的view，也是可以的
+ *         PS:直线那里可以不需要那么麻烦，直接写一个横向的view，根据margin再做计算，也是可以的
+ *         Volley队列并发处理所需的请求
  */
 
 public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 
 	private DisplayMetrics mDisplayMetric;
 	//需动态添加内容的LinearLayout布局
-	private LinearLayout mdatelayout, mdruglayout, mtemperlayout;
+	private LinearLayout mdatelayout, mdruglayout, mtemperlayout,mmaibolayout;
 	private TextView mtxtLivetime;
 	
 	//显示文本的列表(辅助检查/病历记录)
@@ -62,25 +68,26 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 	private List<String> mtxtIllrecordList = new ArrayList<String>();	
 	private List<BingliRecordBean> mBingliRecordList = new ArrayList<BingliRecordBean>();
 	
+	//暂时考虑用GridView做血压，可能更换
 	private GridView mGridView;
 	private BloodAdapter mAdapter;
 
 	// 解析后得到的数组数据
 	private List<String> timeList = new ArrayList<String>();
 	private List<JianchaTypeBean> typebeanList = new ArrayList<JianchaTypeBean>();
+	private List<String> temperList = new ArrayList<String>();
 
 	// 静态常量,Handle判断
 	private static final int INIT_TITLE = 0x0001;
-	private static final int INIT_TEMPER = 0x0007;
 
-	private String url_titletime = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getZhuyuanZhouqiJson/zhuyuan_id/140180-7/timeformat/12/page/1";
+	private String url_titletime = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getZhuyuanZhouqiJson/zhuyuan_id/140180-7/timeformat/24/page/1";
 	private String url_livetime ="http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getZhuyuanShijianJson/zhuyuan_id/140180-7/";
 	private String url_druginfo = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getZhuyuanYongyaoDataJson/zhuyuan_id/140180-7/start_time/2015-05-07/end_time/2017-05-17";
 	private String url_fuzhujiancha = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getFuzhuJianchaDataJson/zhuyuan_id/140180-7/start_time/2015-05-07/end_time/2017-05-17";
 	private String url_nurse = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getHuliDataJson/zhuyuan_id/140180-7/start_time/2015-05-07/end_time/2017-05-17";
 	private String url_illrecord = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getBingliJiluDataJson/zhuyuan_id/140180-7/start_time/2015-05-07/end_time/2017-05-17";
 	private String url_temper = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getHuanzheTizhengDatajson/zhuyuan_id/140180-7/start_time/2015-05-07/end_time/2017-05-17/jiancha_type/%E4%BD%93%E6%B8%A9";
-	
+	private String url_maibo = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getHuanzheTizhengDatajson/zhuyuan_id/140180-7/start_time/2015-05-07/end_time/2017-05-17/jiancha_type/%e8%84%89%e6%90%8f";
 	
 	private Handler mHandler = new Handler() {
 		public void handleMessage(android.os.Message msg) {
@@ -94,12 +101,6 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 				otherRequest(start_time,end_time);
 				//画药品折线
 				drawdrugLine(timeList);
-				break;
-			case INIT_TEMPER:
-				LineChart temperline = new LineChart(getActivity());
-				LineData mLineData = makeLineData((Integer) msg.obj);
-				setChartStyle(temperline, mLineData, Color.WHITE);
-				mtemperlayout.addView(temperline);
 				break;
 			default:
 				break;
@@ -116,6 +117,7 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 		mtxtLivetime = (TextView) view.findViewById(R.id.txt_timesaxisfragment_livetime);
 		mdruglayout = (LinearLayout) view.findViewById(R.id.ll_drug_item);
 		mtemperlayout = (LinearLayout) view.findViewById(R.id.ll_temper_item);
+		mmaibolayout = (LinearLayout) view.findViewById(R.id.ll_maibo_item);
 		
 		//列表初始化
 		mLvFuzhujiancha= (ListView) view.findViewById(R.id.listview_fuzhujiancha);
@@ -127,11 +129,6 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 		mAdapter = new BloodAdapter(getActivity(), timeList);
 		mGridView.setAdapter(mAdapter);
 		mGridView.setEnabled(false);
-
-		// 折线图相关
-		LineChart mLinechart = new LineChart(getActivity());
-		LineData mLineData = makeLineData(30);// TODO这里的数量根据timeList来定
-		setChartStyle(mLinechart, mLineData, Color.WHITE);
 
 		initRequest();
 		initMetric();
@@ -194,7 +191,7 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 //						String live_time = obj.getString("ruyuan_riqi_time");
 						obj = obj.getJSONObject("data");
 						//给mtxtLivetime设置入院时间
-						mtxtLivetime.setText("O 入院时间：" + obj + "");
+						mtxtLivetime.setText("   ○ 入院时间：" + obj + "");
 					} 
 				} catch (JSONException e) {
 					e.printStackTrace();
@@ -247,7 +244,7 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 						for (int i = 0; i < arr.length(); i++) {
 							obj = arr.getJSONObject(i);
 							jiancha_mingcheng = obj.getString("jiancha_mingcheng");
-							mtxtFuzhujianchaList.add(jiancha_mingcheng);
+							mtxtFuzhujianchaList.add(" ☆ " + jiancha_mingcheng);
 						}
 						//将辅助检查的内容放入列表
 						mAdapFuzhujiancha = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, mtxtFuzhujianchaList);
@@ -282,7 +279,7 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 							illrecord.setRecord_time(obj.getString("record_time"));
 							bingcheng_sub_leibie = obj.getString("bingcheng_sub_leibie");
 							//用于显示病例记录中的文字
-							mtxtIllrecordList.add(bingcheng_sub_leibie);
+							mtxtIllrecordList.add( " □ " + bingcheng_sub_leibie);
 							//用于Toast病例中的选中项
 							mBingliRecordList.add(illrecord);
 						}
@@ -309,21 +306,29 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 					String code = obj.getString("code");
 					if (code.equals("1")) {
 						arr = obj.getJSONArray("data");
+						String jiancha_value;
 						for (int i = 0; i < arr.length(); i++) {
 							typebean = new JianchaTypeBean();
 							obj = arr.getJSONObject(i);
+							//可能不需要这个对象数组了，只需要其中的温度值
 							typebean.setJiancha_value(obj.getString("jiancha_value"));
 							typebean.setJiancha_time(obj.getString("jiancha_time"));
 							typebeanList.add(typebean);
+							//温度值放入数组
+							jiancha_value = obj.getString("jiancha_value");
+							temperList.add(jiancha_value);
 						}
-//						Toast.makeText(getActivity(), typebeanList + "", Toast.LENGTH_LONG).show();
-						// 传递给handle主线程处理
-						Message msg = new Message();
-						msg.what = INIT_TEMPER;
-						msg.obj = typebeanList.size();
-						mHandler.sendMessage(msg);
-					} else {
-
+						//直接画折线图
+						LineChart temperline = new LineChart(getActivity());
+						LineData mLineData = makeLineData(temperList,"#cf87e8","#0e18ff");
+						setChartStyle(temperline, mLineData, Color.WHITE);
+						mtemperlayout.addView(temperline);
+						
+						// TODO画折线的数据，可能需要新建一个handler
+//						Message msg = new Message();
+//						msg.what = INIT_TEMPER;
+//						msg.obj = typebeanList.size();
+//						mHandler.sendMessage(msg);
 					}
 				} catch (JSONException e) {
 					e.printStackTrace();
@@ -332,34 +337,78 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 		}, null);
 		temperrequest.setTag(url_temper);
 		
+		//脉搏请求
+		StringRequest maiborequest = new StringRequest(url_maibo, new Response.Listener<String>() {
+			@Override
+			public void onResponse(String response) {
+				try {
+					JSONObject obj;
+					JSONArray arr;
+					JianchaTypeBean typebean;
+					obj = new JSONObject(response);
+					String code = obj.getString("code");
+					if (code.equals("1")) {
+						arr = obj.getJSONArray("data");
+						String jiancha_value;
+						for (int i = 0; i < arr.length(); i++) {
+							typebean = new JianchaTypeBean();
+							obj = arr.getJSONObject(i);
+							//这里应该换脉搏值
+							typebean.setJiancha_value(obj.getString("jiancha_value"));
+							typebean.setJiancha_time(obj.getString("jiancha_time"));
+							typebeanList.add(typebean);
+							//脉搏值放入数组
+							jiancha_value = obj.getString("jiancha_value");
+							temperList.add(jiancha_value);
+						}
+						
+						//直接画折线图(没有请求到脉搏数据，暂时用体温数据)
+						LineChart maiboline = new LineChart(getActivity());
+						LineData mLineData = makeLineData(temperList,"#339966","#ff0000");
+						setChartStyle(maiboline, mLineData, Color.WHITE);
+						mmaibolayout.addView(maiboline);
+					} else {
+
+					}
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+			}
+		}, null);
+		maiborequest.setTag(maiborequest);
+		
 		//加入volley队列，并发请求
 		GlobalInfoApplication.getHttpQueue().add(liverequest);
 		GlobalInfoApplication.getHttpQueue().add(drugrequest);
 		GlobalInfoApplication.getHttpQueue().add(fuzhujiancharequest);
 		GlobalInfoApplication.getHttpQueue().add(illrecordrequest);
 		GlobalInfoApplication.getHttpQueue().add(temperrequest);
+		GlobalInfoApplication.getHttpQueue().add(maiborequest);
 	}
 
-	//测量屏幕
+	/**
+	 * 测量屏幕
+	 */
 	private void initMetric() {
 		mDisplayMetric = new DisplayMetrics();
 		getActivity().getWindowManager().getDefaultDisplay().getMetrics(mDisplayMetric);
-		// Toast.makeText(getActivity(), "屏幕密度为" + mDisplayMetric.density,
-		// Toast.LENGTH_SHORT).show();
-		Log.e("Pix",
-				mDisplayMetric.heightPixels + "," + mDisplayMetric.widthPixels + "。dpi（X和Y是应该是相同的）xdpi= "
+		Log.e("Pix",mDisplayMetric.heightPixels + "," + mDisplayMetric.widthPixels + "。dpi（X和Y是应该是相同的）xdpi= "
 						+ mDisplayMetric.xdpi + ",ydpi = " + mDisplayMetric.ydpi + "。desityx（x的总密度）："
 						+ mDisplayMetric.densityDpi + "，密度" + mDisplayMetric.density);
 	}
 
-	// 日期列表
+	/**
+	 *  日期列表
+	 * @param mList
+	 */
 	private void drawTitleList(List mList) {
 		for (int i = 0; i < mList.size(); i++) {
 			TextView txt = new TextView(getActivity());
 			txt.setText(timeList.get(i).trim());
 			txt.setTextColor(Color.parseColor("#2185c6"));
+			txt.setTextSize(18);
 			txt.setGravity(Gravity.CENTER);
-			// 其实不该是被动的，应该主动设一个宽度让其他项来适应
+			// TODO其实不该是被动的，应该主动设一个宽度让其他项来适应
 			txt.setWidth((int) (mDisplayMetric.density * 2400 / mList.size()));
 			mdatelayout.addView(txt);
 
@@ -369,19 +418,34 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 		}
 	}
 
-	// 药品折线图
+	/**
+	 *  药品折线图  TODO,改为自定义直线,根据药品种类，画线
+	 * @param mList
+	 */
 	private void drawdrugLine(List mList) {
 		for (int i = 0; i < 4; i++) {
-			LineChart drugline = new LineChart(getActivity());
-			LineData mLineData = makeLineData(30);// TODO这里的数量根据timeList来定
-			setChartStyle(drugline, mLineData, Color.WHITE);
+			//自定义画线
+			View drugline = new View(getActivity());
+			LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(1600,(int) (2*mDisplayMetric.density));
+			params.leftMargin = (int) (8*mDisplayMetric.density);
+			params.topMargin = (int) (16*mDisplayMetric.density);
+			params.bottomMargin = (int) (8*mDisplayMetric.density);
+			drugline.setLayoutParams(params);
+			if(i%2 == 0){
+				drugline.setBackgroundColor(Color.parseColor("#ff0000"));
+			}else{
+				drugline.setBackgroundColor(Color.parseColor("#339966"));
+			}
 			mdruglayout.addView(drugline);
+			
+			//第三方折线图			
+//			LineChart drugline = new LineChart(getActivity());
+//			LineData mLineData = makeLineData(null,null,null);// TODO这里的数量根据timeList来定
+//			setChartStyle(drugline, mLineData, Color.WHITE);
+//			mdruglayout.addView(drugline);
 		}
 	}
 	
-	
-/*-------------------------------------------------------------------------------------------------*/
-
 	/**
 	 * 设置折线图显示的样式
 	 * 
@@ -394,7 +458,7 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 		mLineChart.setDrawBorders(false);
 		mLineChart.setDescription("");// 数据描述
 		// 如果没有数据的时候，会显示这个，类似listview的emtpyview
-		mLineChart.setNoDataTextDescription("查询不到数据,可能患者无此项记录");
+		mLineChart.setNoDataTextDescription("查询不到数据,患者无此项记录");
 
 		// 是否绘制背景颜色。
 		// 如果mLineChart.setDrawGridBackground(false)，
@@ -418,34 +482,33 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 		mLineChart.getXAxis().setEnabled(false); // 隐藏右边 的坐标轴(true不隐藏)
 		// mLineChart.getXAxis().setPosition(XAxisPosition.BOTTOM); // 让x轴在下面
 
-		// // 设置比例图标示，就是那个一组y的value的
-		// Legend mLegend = mLineChart.getLegend();
-		// mLegend.setPosition(LegendPosition.BELOW_CHART_CENTER);
-		// mLegend.setForm(LegendForm.CIRCLE);// 样式
-		// mLegend.setFormSize(15.0f);// 字体
-		// mLegend.setTextColor(Color.RED);// 颜色
+		 // 设置比例图标示，就是那个一组y的value的
+		 Legend mLegend = mLineChart.getLegend();
+		 mLegend.setPosition(LegendPosition.BELOW_CHART_CENTER);
+		 mLegend.setForm(LegendForm.CIRCLE);// 样式
+		 mLegend.setFormSize(0.0f);// 字体
+		 mLegend.setTextColor(Color.WHITE);// 颜色
 
 		// 沿x轴动画，时间2000毫秒。
-		// mLineChart.animateX(2000);
+		// mLineChart.animateX(100);
 	}
 
 	/**
 	 * @param count
-	 *            数据点的数量。
+	 *            做数据点
 	 * @return
 	 */
-	private LineData makeLineData(int count) {
+	private LineData makeLineData(List<String> mList,String linecolor, String dotcolor) {
 		// x轴的数据
 		ArrayList<String> x = new ArrayList<String>();
-		for (int i = 0; i < count; i++) {
+		for (int i = 0; i < mList.size(); i++) {
 			x.add("" + i);
 		}
 
 		// y轴的数据
 		ArrayList<Entry> y = new ArrayList<Entry>();
-		for (int i = 0; i < count; i++) {
-			// int val = (int) (Math.random() * 100);
-			int val = 0;
+		for (int i = 0; i < mList.size(); i++) {
+			float val = Float.parseFloat(mList.get(i));
 			Entry entry = new Entry(val, i);
 			y.add(entry);
 		}
@@ -458,9 +521,9 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 		// 显示的圆形大小
 		mLineDataSet.setCircleSize(4.0f);
 		// 折线的颜色
-		mLineDataSet.setColor(Color.RED);
+		mLineDataSet.setColor(Color.parseColor(linecolor));
 		// 圆球的颜色
-		mLineDataSet.setCircleColor(Color.GREEN);
+		mLineDataSet.setCircleColor(Color.parseColor(dotcolor));
 
 		// 设置mLineDataSet.setDrawHighlightIndicators(false)后，
 		// Highlight的十字交叉的纵横线将不会显示，
@@ -471,8 +534,8 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 		mLineDataSet.setHighLightColor(Color.WHITE);
 
 		// 设置这项上显示的数据点的字体大小。
-		mLineDataSet.setValueTextSize(0.0f);
-
+		mLineDataSet.setValueTextSize(10.0f);
+		mLineDataSet.setValueTextColor(Color.parseColor(dotcolor));
 		// mLineDataSet.setDrawCircleHole(true);
 
 		// 改变折线样式，用曲线。
@@ -487,7 +550,7 @@ public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 		// mLineDataSet.setFillColor(Color.RED);
 
 		// 填充折线上数据点、圆球里面包裹的中心空白处的颜色。
-		mLineDataSet.setCircleColorHole(Color.BLUE);
+		mLineDataSet.setCircleColorHole(Color.parseColor(dotcolor));
 
 		// 设置折线上显示数据的格式。如果不设置，将默认显示float数据格式。
 		// mLineDataSet.setValueFormatter(new ValueFormatter() {
