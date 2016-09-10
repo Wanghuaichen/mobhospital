@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="住院用药"
             android:textColor="#2185c6"
@@ -67,7 +67,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="护理记录"
             android:textColor="#2185c6"
@@ -113,7 +113,7 @@
     <HorizontalScrollView
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="6"
+        android:layout_weight="4"
         android:background="#ffffff"
         android:scrollbars="none" >
 
@@ -143,9 +143,10 @@
                     android:layout_weight="1" >
 
                     <TextView
+                        android:id="@+id/txt_timesaxisfragment_livetime"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
                         android:text="住院时间"
                         android:textColor="#000000"
                         android:textSize="22sp" />
@@ -154,7 +155,7 @@
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="2" >
+                    android:layout_weight="1" >
 
                     <LinearLayout
                         android:id="@+id/ll_drug_item"
@@ -167,24 +168,36 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <ListView
+                        android:id="@+id/listview_fuzhujiancha"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_weight="1" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="2" />
+                    android:layout_weight="1" >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
+                    <ListView
+                        android:id="@+id/listview_illrecord"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/ll_temper_item"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:orientation="vertical"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:orientation="vertical" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

@@ -15,6 +15,7 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.tiantanhehe.yidongchafang.GlobalInfoApplication;
 import com.tiantanhehe.yidongchafang.R;
+import com.tiantanhehe.yidongchafang.bean.BingliRecordBean;
 import com.tiantanhehe.yidongchafang.bean.JianchaTypeBean;
 import com.tiantanhehe.yidongchafang.views.adapters.BloodAdapter;
 
@@ -32,8 +33,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 
 /**
  * @author Administrator 折线图如果不是从第一天开始画，先去获取timeList的每一项宽度*跳过的天数，就可以当做marginleft
@@ -42,15 +46,26 @@ import android.widget.Toast;
  *         PS:直线那里可以不需要那么麻烦，直接写一个横向的view，也是可以的
  */
 
-public class TimesAxisFragment extends Fragment {
+public class TimesAxisFragment extends Fragment implements OnItemClickListener{
 
 	private DisplayMetrics mDisplayMetric;
+	//需动态添加内容的LinearLayout布局
 	private LinearLayout mdatelayout, mdruglayout, mtemperlayout;
-
+	private TextView mtxtLivetime;
+	
+	//显示文本的列表(辅助检查/病历记录)
+	private ListView mLvFuzhujiancha;
+	private ArrayAdapter<String> mAdapFuzhujiancha;
+	private List<String> mtxtFuzhujianchaList = new ArrayList<String>();
+	private ListView mLvIllrecord;
+	private ArrayAdapter<String> mAdapIllrecord;
+	private List<String> mtxtIllrecordList = new ArrayList<String>();	
+	private List<BingliRecordBean> mBingliRecordList = new ArrayList<BingliRecordBean>();
+	
 	private GridView mGridView;
 	private BloodAdapter mAdapter;
 
-	// 解析得到的数组数据
+	// 解析后得到的数组数据
 	private List<String> timeList = new ArrayList<String>();
 	private List<JianchaTypeBean> typebeanList = new ArrayList<JianchaTypeBean>();
 
@@ -59,15 +74,26 @@ public class TimesAxisFragment extends Fragment {
 	private static final int INIT_TEMPER = 0x0007;
 
 	private String url_titletime = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getZhuyuanZhouqiJson/zhuyuan_id/140180-7/timeformat/12/page/1";
-	// private String url_intohospitaltime ="http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getZhuyuanShijianJson/zhuyuan_id/140180-7/";
+	private String url_livetime ="http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getZhuyuanShijianJson/zhuyuan_id/140180-7/";
 	private String url_druginfo = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getZhuyuanYongyaoDataJson/zhuyuan_id/140180-7/start_time/2015-05-07/end_time/2017-05-17";
-	private String url_tiwen = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getHuanzheTizhengDatajson/zhuyuan_id/140180-7/start_time/2015-05-07/end_time/2017-05-17/jiancha_type/%E4%BD%93%E6%B8%A9";
+	private String url_fuzhujiancha = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getFuzhuJianchaDataJson/zhuyuan_id/140180-7/start_time/2015-05-07/end_time/2017-05-17";
+	private String url_nurse = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getHuliDataJson/zhuyuan_id/140180-7/start_time/2015-05-07/end_time/2017-05-17";
+	private String url_illrecord = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getBingliJiluDataJson/zhuyuan_id/140180-7/start_time/2015-05-07/end_time/2017-05-17";
+	private String url_temper = "http://203.195.184.174/tiantan_emr/Mobile/YidongChafangClientCommunication/getHuanzheTizhengDatajson/zhuyuan_id/140180-7/start_time/2015-05-07/end_time/2017-05-17/jiancha_type/%E4%BD%93%E6%B8%A9";
+	
 	
 	private Handler mHandler = new Handler() {
 		public void handleMessage(android.os.Message msg) {
 			switch (msg.what) {
 			case INIT_TITLE:
 				drawTitleList((List) msg.obj);
+				//取出start_time和end_time
+				String start_time = timeList.get(0);
+				String end_time = timeList.get(timeList.size()-1);
+				//执行其他请求
+				otherRequest(start_time,end_time);
+				//画药品折线
+				drawdrugLine(timeList);
 				break;
 			case INIT_TEMPER:
 				LineChart temperline = new LineChart(getActivity());
@@ -85,10 +111,18 @@ public class TimesAxisFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = LayoutInflater.from(getActivity()).inflate(R.layout.activity_timesaxis, null);
 
-		// 顶部时间linear
+		// 主Item初始化
 		mdatelayout = (LinearLayout) view.findViewById(R.id.ll_date_title);
+		mtxtLivetime = (TextView) view.findViewById(R.id.txt_timesaxisfragment_livetime);
 		mdruglayout = (LinearLayout) view.findViewById(R.id.ll_drug_item);
 		mtemperlayout = (LinearLayout) view.findViewById(R.id.ll_temper_item);
+		
+		//列表初始化
+		mLvFuzhujiancha= (ListView) view.findViewById(R.id.listview_fuzhujiancha);
+		mLvIllrecord = (ListView) view.findViewById(R.id.listview_illrecord);
+		//病例记录列表的Toast事件
+		mLvIllrecord.setOnItemClickListener(this);
+		
 		mGridView = (GridView) view.findViewById(R.id.gridview_blood);
 		mAdapter = new BloodAdapter(getActivity(), timeList);
 		mGridView.setAdapter(mAdapter);
@@ -99,12 +133,15 @@ public class TimesAxisFragment extends Fragment {
 		LineData mLineData = makeLineData(30);// TODO这里的数量根据timeList来定
 		setChartStyle(mLinechart, mLineData, Color.WHITE);
 
-		drawdrugLine(timeList);
 		initRequest();
 		initMetric();
 		return view;
 	}
 
+	/**
+	 * 初始请求
+	 * 去获取时间列表
+	 */
 	private void initRequest() {
 		StringRequest timerequest = new StringRequest(url_titletime, new Response.Listener<String>() {
 			@Override
@@ -134,8 +171,39 @@ public class TimesAxisFragment extends Fragment {
 		}, null);
 		timerequest.setTag(url_titletime);
 		GlobalInfoApplication.getHttpQueue().add(timerequest);
+	}
 
-		// 药品请求
+	/**
+	 * 初始化请求成功后执行以下请求
+	 * 入参start_time和end_time
+	 */
+	private void otherRequest(String start_time,String end_time) {
+		// 入院时间请求
+		StringRequest liverequest = new StringRequest(url_livetime, new Response.Listener<String>() {
+			@Override
+			public void onResponse(String response) {
+				try {
+					JSONObject obj;
+					JSONArray arr;
+					obj = new JSONObject(response);
+					String code = obj.getString("code");
+					if (code.equals("1")) {
+						/*后端返回的不是数组，无法用数组读取,改成数组后，将下列注释替换即可*/
+//						arr = obj.getJSONArray("data");
+//						obj = arr.getJSONObject(0);
+//						String live_time = obj.getString("ruyuan_riqi_time");
+						obj = obj.getJSONObject("data");
+						//给mtxtLivetime设置入院时间
+						mtxtLivetime.setText("O 入院时间：" + obj + "");
+					} 
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+			}
+		}, null);
+		liverequest.setTag(url_livetime);
+		
+		// 用药请求
 		StringRequest drugrequest = new StringRequest(url_druginfo, new Response.Listener<String>() {
 			@Override
 			public void onResponse(String response) {
@@ -152,10 +220,10 @@ public class TimesAxisFragment extends Fragment {
 							timeList.add(b[i]);
 						}
 						// 传递给handle主线程处理
-						Message msg = Message.obtain();
-						msg.what = INIT_TITLE;
-						msg.obj = timeList;
-						mHandler.sendMessage(msg);
+//						Message msg = Message.obtain();
+//						msg.what = INIT_TITLE;
+//						msg.obj = timeList;
+//						mHandler.sendMessage(msg);
 					}
 				} catch (JSONException e) {
 					e.printStackTrace();
@@ -163,9 +231,74 @@ public class TimesAxisFragment extends Fragment {
 			}
 		}, null);
 		drugrequest.setTag(url_druginfo);
-
+		
+		// 辅助检查请求
+		StringRequest fuzhujiancharequest = new StringRequest(url_fuzhujiancha, new Response.Listener<String>() {
+			@Override
+			public void onResponse(String response) {
+				try {
+					JSONObject obj;
+					JSONArray arr;
+					obj = new JSONObject(response);
+					String code = obj.getString("code");
+					if (code.equals("1")) {
+						arr = obj.getJSONArray("data");
+						String jiancha_mingcheng;
+						for (int i = 0; i < arr.length(); i++) {
+							obj = arr.getJSONObject(i);
+							jiancha_mingcheng = obj.getString("jiancha_mingcheng");
+							mtxtFuzhujianchaList.add(jiancha_mingcheng);
+						}
+						//将辅助检查的内容放入列表
+						mAdapFuzhujiancha = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, mtxtFuzhujianchaList);
+						mLvFuzhujiancha.setAdapter(mAdapFuzhujiancha);
+					} 
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+			}
+		}, null);
+		fuzhujiancharequest.setTag(url_fuzhujiancha);
+		
+		//病例记录请求
+		StringRequest illrecordrequest = new StringRequest(url_illrecord, new Response.Listener<String>() {
+			@Override
+			public void onResponse(String response) {
+				try {
+					JSONObject obj;
+					JSONArray arr;
+					BingliRecordBean illrecord;
+					obj = new JSONObject(response);
+					String code = obj.getString("code");
+					if (code.equals("1")) {
+						arr = obj.getJSONArray("data");
+						String bingcheng_sub_leibie;
+						for (int i = 0; i < arr.length(); i++) {
+							obj = arr.getJSONObject(i);
+							illrecord = new BingliRecordBean();
+							illrecord.setBingcheng_sub_leibie(obj.getString("bingcheng_sub_leibie"));
+							illrecord.setId(obj.getString("id"));
+							illrecord.setLeixing(obj.getString("leixing"));
+							illrecord.setRecord_time(obj.getString("record_time"));
+							bingcheng_sub_leibie = obj.getString("bingcheng_sub_leibie");
+							//用于显示病例记录中的文字
+							mtxtIllrecordList.add(bingcheng_sub_leibie);
+							//用于Toast病例中的选中项
+							mBingliRecordList.add(illrecord);
+						}
+						//将病例记录的内容放入列表
+						mAdapIllrecord = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, mtxtIllrecordList);
+						mLvIllrecord.setAdapter(mAdapIllrecord);
+					} 
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+			}
+		}, null);
+		illrecordrequest.setTag(url_illrecord);
+		
 		// 体温请求
-		StringRequest tiwenrequest = new StringRequest(url_tiwen, new Response.Listener<String>() {
+		StringRequest temperrequest = new StringRequest(url_temper, new Response.Listener<String>() {
 			@Override
 			public void onResponse(String response) {
 				try {
@@ -183,7 +316,7 @@ public class TimesAxisFragment extends Fragment {
 							typebean.setJiancha_time(obj.getString("jiancha_time"));
 							typebeanList.add(typebean);
 						}
-						Toast.makeText(getActivity(), typebeanList + "", Toast.LENGTH_LONG).show();
+//						Toast.makeText(getActivity(), typebeanList + "", Toast.LENGTH_LONG).show();
 						// 传递给handle主线程处理
 						Message msg = new Message();
 						msg.what = INIT_TEMPER;
@@ -197,13 +330,17 @@ public class TimesAxisFragment extends Fragment {
 				}
 			}
 		}, null);
-		tiwenrequest.setTag(url_tiwen);
-
-		GlobalInfoApplication.getHttpQueue().add(timerequest);
+		temperrequest.setTag(url_temper);
+		
+		//加入volley队列，并发请求
+		GlobalInfoApplication.getHttpQueue().add(liverequest);
 		GlobalInfoApplication.getHttpQueue().add(drugrequest);
-		GlobalInfoApplication.getHttpQueue().add(tiwenrequest);
+		GlobalInfoApplication.getHttpQueue().add(fuzhujiancharequest);
+		GlobalInfoApplication.getHttpQueue().add(illrecordrequest);
+		GlobalInfoApplication.getHttpQueue().add(temperrequest);
 	}
 
+	//测量屏幕
 	private void initMetric() {
 		mDisplayMetric = new DisplayMetrics();
 		getActivity().getWindowManager().getDefaultDisplay().getMetrics(mDisplayMetric);
@@ -377,5 +514,12 @@ public class TimesAxisFragment extends Fragment {
 
 		LineData mLineData = new LineData(x, mLineDataSets);
 		return mLineData;
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		BingliRecordBean local_illrecord = mBingliRecordList.get(position);
+		String show_text = local_illrecord.getRecord_time() + ":" + local_illrecord.getBingcheng_sub_leibie();
+		Toast.makeText(getActivity(), show_text,Toast.LENGTH_LONG).show();
 	}
 }
